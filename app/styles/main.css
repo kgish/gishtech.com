@@ -17,20 +17,24 @@
     font-weight: bold
 }
 
-#jumbotron_index {
-    background-image: url(../images/jumbotron-index.png);
+#jumbotron-index {
+    background-image: url(/assets/images/banner-index.png);
 }
 
-#jumbotron_skills {
-    background-image: url(../images/jumbotron-skills.png);
+#jumbotron-skills {
+    background-image: url(/assets/images/banner-skills.png);
 }
 
-#jumbotron_about {
-    background-image: url(../images/jumbotron-about.png);
+#jumbotron-about {
+    background-image: url(/assets/images/banner-about.png);
 }
 
-#jumbotron_contact {
-    background-image: url(../images/jumbotron-contact.png);
+#jumbotron-contact {
+    background-image: url(/assets/images/banner-contact.png);
+}
+
+#jumbotron-terms-and-conditions {
+    background-image: url(/assets/images/banner-terms-and-conditions.png);
 }
 
 .marketing h4 {
