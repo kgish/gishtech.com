@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('skills');
   this.route('contact');
   this.route('about');
+  this.route('terms-and-conditions');
 });
 
 export default Router;
