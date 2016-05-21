@@ -1,7 +1,7 @@
 {
   "name": "gishtech",
-  "version": "0.0.0",
-  "description": "Small description for gishtech goes here",
+  "version": "0.0.1",
+  "description": "Gishtech website",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -12,11 +12,14 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kgish/gishtech.com.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Kiffin Gish",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -30,6 +33,7 @@
     "ember-cli-htmlbars": "^1.0.3",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.4.0",
+    "ember-cli-inline-content": "^0.4.0",
     "ember-cli-jshint": "^1.0.0",
     "ember-cli-qunit": "^1.4.0",
     "ember-cli-release": "0.2.8",
