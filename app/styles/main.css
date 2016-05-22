@@ -55,4 +55,8 @@ h4.with-fa {
         font-size: 12px;
     }
 
+    .hide-mobile {
+        display: none;
+    }
+
 }

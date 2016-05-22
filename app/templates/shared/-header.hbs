@@ -1,12 +1,23 @@
 <div class="header clearfix">
     <nav>
         <ul class="nav nav-pills pull-left">
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'index'}}{{fa-icon 'home'}}&nbsp; Home{{/link-to}}{{/active-link}}
+            {{#active-link tagName='li' role="presentation"}}{{#link-to 'index'}}
+                <span class="hide-mobile">{{fa-icon 'home'}}&nbsp; </span>Home
+            {{/link-to}}{{/active-link}}
         </ul>
         <ul class="nav nav-pills pull-right">
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'skills'}}{{fa-icon 'wrench'}}&nbsp; Skills{{/link-to}}{{/active-link}}
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'about'}}{{fa-icon 'info-circle'}}&nbsp; About{{/link-to}}{{/active-link}}
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'contact'}}{{fa-icon 'envelope'}}&nbsp; Contact{{/link-to}}{{/active-link}}
+            {{#active-link tagName='li' role="presentation"}}{{#link-to 'skills'}}
+                <span class="hide-mobile">{{fa-icon 'wrench'}}&nbsp; </span>
+                Skills
+            {{/link-to}}{{/active-link}}
+            {{#active-link tagName='li' role="presentation"}}{{#link-to 'about'}}
+                <span class="hide-mobile">{{fa-icon 'info-circle'}}&nbsp; </span>
+                About
+            {{/link-to}}{{/active-link}}
+            {{#active-link tagName='li' role="presentation"}}{{#link-to 'contact'}}
+                <span class="hide-mobile">{{fa-icon 'envelope'}}&nbsp; </span>
+                Contact
+            {{/link-to}}{{/active-link}}
         </ul>
     </nav>
 </div>
