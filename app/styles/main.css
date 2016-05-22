@@ -33,6 +33,10 @@
     background-image: url(/assets/images/banner-contact.png);
 }
 
+#jumbotron-credits {
+    background-image: url(/assets/images/banner-credits.png);
+}
+
 #jumbotron-terms-and-conditions {
     background-image: url(/assets/images/banner-terms-and-conditions.png);
 }
@@ -41,7 +45,7 @@
     font-weight: bold;
 }
 
-.skills p {
+.skills p, .credits p {
     font-size: 16px;
 }
 
