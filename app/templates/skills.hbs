@@ -9,7 +9,7 @@
         <div class="row skills">
             <div class="col-lg-6">
                 {{#each model as |skill index|}}
-                    {{#if (compare-two index '<' (half-of model.length))}}
+                    {{#if (lt index (half-of model.length))}}
                         <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; {{skill.name}}</p>
                     {{/if}}
                 {{/each}}
@@ -17,7 +17,7 @@
 
             <div class="col-lg-6">
                 {{#each model as |skill index|}}
-                    {{#if (compare-two index '>=' (half-of model.length))}}
+                    {{#if (gte index (half-of model.length))}}
                         <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; {{skill.name}}</p>
                     {{/if}}
                 {{/each}}
