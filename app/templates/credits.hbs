@@ -2,21 +2,24 @@
     <div class="col-lg-12">
         <h4>Credits</h4>
         <p>
-            This website would never have been possible without the following fantastic tools and utilities
-            from the wonderful world of open source.
+            This website would never have been possible without the following fantastic open source tools and utilities.
         </p>
 
         <div class="row credits">
             <div class="col-lg-6">
-                <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; <a href="http://emberjs.com">Ember</a></p>
-                <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; <a href="http://ember-animation.github.io/liquid-fire">Liquid Fire</a></p>
-                <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; <a href="https://www.ember-fastboot.com">Fastboot</a></p>
+                {{#each model as |credit index|}}
+                    {{#if (compare-two index '<' (half-of model.length))}}
+                        <p>{{fa-icon 'check' class='text-success'}}&nbsp; <a href="http://{{credit.url}}">{{credit.name}}</a></p>
+                    {{/if}}
+                {{/each}}
             </div>
 
             <div class="col-lg-6">
-                <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; <a href="http://getbootstrap.com">Bootstrap</a></p>
-                <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; <a href="http://fontawesome.io">Font Awesome</a></p>
-                <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; <a href="http://sass-lang.com">Sass</a></p>
+                {{#each model as |credit index|}}
+                    {{#if (compare-two index '>=' (half-of model.length))}}
+                        <p>{{fa-icon 'check' class='text-success'}}&nbsp; <a href="http://{{credit.url}}">{{credit.name}}</a></p>
+                    {{/if}}
+                {{/each}}
             </div>
         </div>
     </div>
