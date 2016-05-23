@@ -9,7 +9,7 @@
             <div class="col-lg-6">
                 {{#each model as |credit index|}}
                     {{#if (compare-two index '<' (half-of model.length))}}
-                        <p>{{fa-icon 'check' class='text-success'}}&nbsp; <a href="http://{{credit.url}}">{{credit.name}}</a></p>
+                        <p>{{fa-icon 'star' class='text-success'}}&nbsp; <a href="http://{{credit.url}}">{{credit.name}}</a></p>
                     {{/if}}
                 {{/each}}
             </div>
@@ -17,7 +17,7 @@
             <div class="col-lg-6">
                 {{#each model as |credit index|}}
                     {{#if (compare-two index '>=' (half-of model.length))}}
-                        <p>{{fa-icon 'check' class='text-success'}}&nbsp; <a href="http://{{credit.url}}">{{credit.name}}</a></p>
+                        <p>{{fa-icon 'star' class='text-success'}}&nbsp; <a href="http://{{credit.url}}">{{credit.name}}</a></p>
                     {{/if}}
                 {{/each}}
             </div>
