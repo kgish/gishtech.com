@@ -6,22 +6,6 @@
             of software development. As a result, I can offer services and consultancy in a wide range.
         </p>
 
-        <div class="row skills">
-            <div class="col-lg-6">
-                {{#each model as |skill index|}}
-                    {{#if (lt index (half-of model.length))}}
-                        <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; {{skill.name}}</p>
-                    {{/if}}
-                {{/each}}
-            </div>
-
-            <div class="col-lg-6">
-                {{#each model as |skill index|}}
-                    {{#if (gte index (half-of model.length))}}
-                        <p>{{fa-icon 'wrench' class='text-success'}}&nbsp; {{skill.name}}</p>
-                    {{/if}}
-                {{/each}}
-            </div>
-        </div>
+        {{skill-listing skills=model}}
     </div>
 </div>
