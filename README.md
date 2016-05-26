@@ -22,6 +22,12 @@ The installation is quite straight forward.
     $ npm install
     $ ember server
     
+Running on production simply means executing the following.
+
+    $ ember build --environment=production
+    
+Ensuring that the `dist` directory is placed in the `DocumentRoot`.    
+    
 Please note that in order to be able to use `ember-cli-mirage` in production, I've added the following lines to the
 `config/environment.js` configuration file.
 
