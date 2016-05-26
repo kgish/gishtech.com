@@ -11,14 +11,35 @@ export default Ember.Component.extend({
     classNames: ['skill-listing'],
     filterScore: 0,
     scores: scores,
-    
+
     randomSkills: Ember.computed('skills', function(){
-        return this.get('skills');
+        var skills = this.get('skills'),
+            s = [], o = [], res = [];
+
+        skills.forEach(function(skill){
+            s.pushObject({ name: skill.get('name'), url: skill.get('url'), score: skill.get('score') });
+        });
+
+        for (var n = 0; n < s.length; n++) {
+            o.push(n);
+        }
+        
+	    for (var i = o.length; i; ) {
+            var j = parseInt(Math.random() * i), x = o[--i];
+            o[i] = o[j]; 
+            o[j] = x;
+        }
+
+        o.forEach(function(n) {
+           res.pushObject(s[n]);
+        });
+
+        return res;
     }),
 
     actions: {
         filterScore(n) {
-           this.set('filterScore', n); 
+           this.set('filterScore', n);
         }
     }
 });
