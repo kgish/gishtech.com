@@ -2,7 +2,7 @@
 
 The new-and-improved gishtech website using emberjs.
 
-![](public/assets/images/screenshot-banner-index?raw=true | width=400)
+![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
 
 ## Introduction
 
