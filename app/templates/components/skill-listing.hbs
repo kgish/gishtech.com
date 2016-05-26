@@ -1,8 +1,14 @@
-<div class="btn-toolbar scores" role="toolbar">
+<div class="btn-toolbar skills-scores" role="toolbar">
     {{#each scores as |score|}}
-        <button type="button" class="btn btn-default btn-sm">
-            <a href="#" class="nounderline" {{action 'filterScore' score.value}}>{{#if (eq filterScore score.value)}}{{fa-icon 'play'}} {{/if}}{{score.title}} &nbsp;{{skill-property-score score.value}}</a>
-        </button>
+        {{#if (eq filterScore score.value)}}
+            <a href="#" class="btn btn-primary btn-sm" {{action 'filterScore' null}}>
+                {{fa-icon 'play'}} {{score.title}} &nbsp;{{skill-property-score score.value}}
+            </a>
+        {{else}}
+            <a href="#" class="btn btn-default btn-sm" {{action 'filterScore' score.value}}>
+                {{score.title}} &nbsp;{{skill-property-score score.value}}
+            </a>
+        {{/if}}
     {{/each}}
 </div>
 

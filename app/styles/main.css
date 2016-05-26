@@ -37,6 +37,10 @@
     background-image: url(/assets/images/banner-credits.png);
 }
 
+#jumbotron-logo {
+    background-image: url(/assets/images/banner-logo.png);
+}
+
 #jumbotron-terms-and-conditions {
     background-image: url(/assets/images/banner-terms-and-conditions.png);
 }
@@ -49,17 +53,17 @@
     font-size: 16px;
 }
 
-button.skill {
-    margin: 5px;
+.skills-scores a {
+    font-weight: bold;
+    margin: 3px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
-button.skill a {
+.skill-item a {
     color: white;
     font-weight: bold;
-}
-
-a.nounderline {
-    text-decoration: none
+    margin: 3px;
 }
 
 h4.with-fa {

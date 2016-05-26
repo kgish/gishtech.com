@@ -12,7 +12,7 @@ export default Ember.Component.extend({
     filterScore: 0,
     scores: scores,
 
-    randomSkills: Ember.computed('skills', function(){
+    randomSkills: Ember.computed('skills', 'filterScore', function(){
         var skills = this.get('skills'),
             s = [], o = [], res = [];
 
@@ -31,7 +31,7 @@ export default Ember.Component.extend({
         }
 
         o.forEach(function(n) {
-           res.pushObject(s[n]);
+            res.pushObject(s[n]);
         });
 
         return res;
@@ -39,7 +39,9 @@ export default Ember.Component.extend({
 
     actions: {
         filterScore(n) {
-           this.set('filterScore', n);
+            if (n !== null || n === this.get('filterScore')) {
+                this.set('filterScore', n);
+            }
         }
     }
 });

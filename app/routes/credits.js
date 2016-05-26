@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     model() {
         return [
-            { name: 'Ember',
+            { name: 'Ember.js',
               url: 'emberjs.com'
             },
             { name: 'Liquid Fire',
