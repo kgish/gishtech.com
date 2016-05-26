@@ -2,7 +2,7 @@
 
 The new-and-improved gishtech website using emberjs.
 
-http://www.gishtech.com
+[gishtech.com](http://www.gishtech.com)
 
 ![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
 
@@ -21,6 +21,17 @@ The installation is quite straight forward.
     $ cd gishtech.com
     $ npm install
     $ ember server
+    
+Please note that in order to be able to use `ember-cli-mirage` in production, I've added the following lines to the
+`config/environment.js` configuration file.
+
+```javascript
+if (environment === 'production') {
+    ENV['ember-cli-mirage'] = {
+        enabled: true
+    };
+}
+```
 
 ## References
 
@@ -30,11 +41,12 @@ more about new and interesting stuff.
 * [Ember.js](http://emberjs.com/)
 * [Liquid Fire](http://ember-animation.github.io/liquid-fire/)
 * [Bootstrap](http://getbootstrap.com/)
-* [Fastboot](http://www.ember-fastboot.com/)
-* [Font Awesome](http://fontawesome.io/)
+* [Ember-cli-mirage](http://www.ember-cli-mirage.com/)
+* [Ember-fastboot](http://www.ember-fastboot.com/)
+* [Fontawesome](http://fontawesome.io/)
 * [Sass](http://sass-lang.com/)
 * [Ember-cli](http://ember-cli.com/)
-* [Babel](http://babeljs.io/)
+* [Babel.js](http://babeljs.io/)
 
 ## Author
 
