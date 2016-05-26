@@ -7,7 +7,7 @@ The new-and-improved gishtech website using emberjs.
 ## Introduction
 
 I decided to make this website public and share it on my github. That way other people who might be interested in 
-creating a similar website using the amazing [Ember.js framework](http://emberjs.com) can see for themselves how I 
+creating a similar website using the amazing [Ember.js Framework](http://emberjs.com) can see for themselves how I 
 did it. This is just a simple website advertising myself as an enthusiastic and eager developer looking for fun 
 projects to do.
 
