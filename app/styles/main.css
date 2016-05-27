@@ -70,6 +70,9 @@ h4.with-fa {
     margin-left: -15px;
 }
 
+.heart {
+    color: firebrick;
+}
 @media only screen and (max-width: 768px) {
 
     .header > nav > ul.nav.nav-pills > li > a {
