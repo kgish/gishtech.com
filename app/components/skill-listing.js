@@ -13,6 +13,7 @@ export default Ember.Component.extend({
     scores: scores,
 
     randomSkills: Ember.computed('skills', 'filterScore', function(){
+        // We want to randomize the list of skills in order to make it less boring.
         var skills = this.get('skills'),
             s = [], o = [], res = [];
 
@@ -39,7 +40,8 @@ export default Ember.Component.extend({
 
     actions: {
         filterScore(n) {
-            if (n !== null || n === this.get('filterScore')) {
+            // Only display skills with a given score (n).
+            if (n !== this.get('filterScore')) {
                 this.set('filterScore', n);
             }
         }
