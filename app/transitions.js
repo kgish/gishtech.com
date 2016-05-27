@@ -11,8 +11,13 @@ export default function(){
         this.reverse('toRight')
     );
     this.transition(
+        this.fromRoute('about'),
+        this.use('toLeft'),
+        this.reverse('toRight')
+    );
+    this.transition(
         this.fromRoute('contact'),
-        this.use('toRight'),
-        this.reverse('toLeft')
+        this.use('toLeft'),
+        this.reverse('toRight')
     );
 }

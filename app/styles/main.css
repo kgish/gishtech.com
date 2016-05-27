@@ -49,6 +49,10 @@
     font-weight: bold;
 }
 
+.with-fa {
+    margin-left: -15px;
+}
+
 .skills p, .credits p {
     font-size: 16px;
 }
@@ -64,10 +68,6 @@
     color: white;
     font-weight: bold;
     margin: 3px;
-}
-
-h4.with-fa {
-    margin-left: -15px;
 }
 
 .score {
