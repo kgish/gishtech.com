@@ -1,6 +1,6 @@
 # GISHTECH.COM
 
-The new-and-improved gishtech website built with emberjs, bootstrap, liquid fire and other fun stuff.
+Welcome to the new-and-improved gishtech website! I built with emberjs, bootstrap, liquid fire and other fun stuff.
 
 [gishtech.com](http://www.gishtech.com)
 
