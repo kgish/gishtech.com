@@ -48,7 +48,7 @@ By default `ember-cli-mirage` is only anabled for `development` and `test` envir
 While the following list of references is far from complete, it should nonetheless give you a good start for learning
 more about new and interesting stuff.
 
-* [Babel.js](http://babeljs.io/) - Support for the latest version of JavaScript (ES@015) through syntax transformers.
+* [Babel.js](http://babeljs.io/) - Support for the latest version of JavaScript (ES2015) through syntax transformers.
 * [Bootstrap](http://getbootstrap.com/) - HTML, CSS, and JS framework for developing responsive, mobile projects.
 * [Ember-cli-mirage](http://www.ember-cli-mirage.com/) - A client-side mock server to develop, test and prototype your app. 
 * [Ember-cli](http://ember-cli.com/) - The Ember.js command line utility.
