@@ -1,6 +1,6 @@
 # GISHTECH.COM
 
-Welcome to the new-and-improved gishtech website! I built with emberjs, bootstrap, liquid fire and other fun stuff.
+Welcome to the new-and-improved gishtech website! I built with emberjs v2.5.x, bootstrap, liquid fire and other fun stuff.
 
 Have a look at [gishtech.com](http://www.gishtech.com) for the real mccoy.
 
