@@ -2,7 +2,7 @@
 
 Welcome to the new-and-improved gishtech website! I built with emberjs, bootstrap, liquid fire and other fun stuff.
 
-[gishtech.com](http://www.gishtech.com)
+Have a look at [gishtech.com](http://www.gishtech.com) for the real mccoy.
 
 ![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
 
