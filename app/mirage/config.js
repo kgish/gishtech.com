@@ -7,21 +7,26 @@ export default function() {
                 id: 1,
                 attributes: {
                     title: 'Dependable and down-to-earth',
-                    description: 'I provide professional consultancy on advanced software development, methodologies, tooling, people and processes for web-based applications'
+                    description: 'I am a full stack developer with management experience who savours advanced ' +
+                                 'software development, agile methodologies, tooling, people and processes for ' +
+                                 'building slick web-based applications'
                 }
             }, {
                 type: 'intros',
                 id: 2,
                 attributes: {
                     title: 'From start to finish non-stop',
-                    description: 'I do full stack development over the complete software development life cycle: user stories, testing, implementation, testing, deployment, testing, all the way through after-care, maintenance and testing'
+                    description: 'I can perform well over the complete software development life cycle: design, user ' +
+                                 'stories, bdd, programming, unit-testing, code review, uat, deployment, ' +
+                                 'after-care, maintenance and trouble-shooting'
                 }
             }, {
                 type: 'intros',
                 id: 3,
                 attributes: {
                     title: 'Team management is fun',
-                    description: 'I take coaching and motivating teams seriously, fostering the fun-factor and encouraging others to build stuff that we can be proud about'
+                    description: 'I take coaching and motivating teams very seriously, fostering the fun-factor and team ' +
+                    'spirit encouraging others to build stuff that we can be proud about'
                 }
             }, {
                 type: 'intros',
@@ -35,7 +40,7 @@ export default function() {
                 id: 5,
                 attributes: {
                     title: 'Lots and lots of testing',
-                    description: 'I am a real stickler when it comes to testing, and where possible I introduce automated testing as early as possible in order to avoid introducing unnecessary bugs'
+                    description: 'I am a real stickler when it comes to testing, and where possible I introduce automated testing as early as possible in order to avoid introducing unnecessary design defects and bugs'
                 }
             }]
         };
