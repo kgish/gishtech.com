@@ -1,5 +1,10 @@
 <div class="container">
-    {{partial 'shared/header'}}
+    {{header-nav}}
+    {{header-banner
+        title='Gishtech'
+        subtitle='Advanced Software Development<br/>for the Web'
+        routename=currentRouteName
+    }}
     {{liquid-outlet}}
-    {{partial 'shared/footer'}}
+    {{footer-nav}}
 </div>
