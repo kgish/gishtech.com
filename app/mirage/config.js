@@ -6,15 +6,6 @@ export default function() {
                 type: 'intros',
                 id: 1,
                 attributes: {
-                    title: 'Dependable and down-to-earth',
-                    description: 'I am a full stack developer with management experience who savours advanced ' +
-                                 'software development, agile methodologies, tooling, people and processes for ' +
-                                 'building slick web-based applications'
-                }
-            }, {
-                type: 'intros',
-                id: 2,
-                attributes: {
                     title: 'From start to finish non-stop',
                     description: 'I can perform well over the complete software development life cycle: design, user ' +
                                  'stories, bdd, programming, unit-testing, code review, uat, deployment, ' +
@@ -22,7 +13,7 @@ export default function() {
                 }
             }, {
                 type: 'intros',
-                id: 3,
+                id: 2,
                 attributes: {
                     title: 'Team management is fun',
                     description: 'I take coaching and motivating teams very seriously, fostering the fun-factor and team ' +
@@ -30,14 +21,14 @@ export default function() {
                 }
             }, {
                 type: 'intros',
-                id: 4,
+                id: 3,
                 attributes: {
                     title: 'Straight-forward work ethos',
                     description: 'I am pragmatic and believe in a hands-on mentality where rolling up your sleeves and getting the job done right the very first time is the name of the game'
                 }
             }, {
                 type: 'intros',
-                id: 5,
+                id: 4,
                 attributes: {
                     title: 'Lots and lots of testing',
                     description: 'I am a real stickler when it comes to testing, and where possible I introduce automated testing as early as possible in order to avoid introducing unnecessary design defects and bugs'

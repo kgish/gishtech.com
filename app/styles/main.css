@@ -49,8 +49,8 @@
     font-weight: bold;
 }
 
-.with-fa {
-    margin-left: -15px;
+.intro-item {
+    margin-bottom: 20px;
 }
 
 .skills p, .credits p {
@@ -67,7 +67,7 @@
 .skill-item a {
     color: white;
     font-weight: bold;
-    margin: 3px;
+    margin: 3px 5px 10px;
 }
 
 .score {
@@ -77,6 +77,7 @@
 .heart {
     color: firebrick;
 }
+
 @media only screen and (max-width: 768px) {
 
     .header > nav > ul.nav.nav-pills > li > a {
