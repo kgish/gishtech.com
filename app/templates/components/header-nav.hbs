@@ -1,8 +1,9 @@
 <div class="header clearfix">
     <nav>
         <ul class="nav nav-pills pull-left">
-            {{#active-link tagName='li' class="logo" role="presentation"}}{{#link-to 'index'}}
-                <img src="/assets/images/gishtech.svg" width="30"/> Home
+            {{#active-link tagName='li' role="presentation"}}{{#link-to 'index'}}
+                <span class="hide-mobile">{{fa-icon 'home'}}&nbsp; </span>
+                Home
             {{/link-to}}{{/active-link}}
         </ul>
         <ul class="nav nav-pills pull-right">
