@@ -1,28 +1,35 @@
-<div class="header clearfix">
-    <nav>
-        <ul class="nav nav-pills pull-left">
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'index'}}
-                <span class="hide-mobile">{{fa-icon 'home'}}&nbsp; </span>
-                Home
-            {{/link-to}}{{/active-link}}
-        </ul>
-        <ul class="nav nav-pills pull-right">
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'skills'}}
-                <span class="hide-mobile">{{fa-icon 'wrench'}}&nbsp; </span>
-                Skills
-            {{/link-to}}{{/active-link}}
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'about'}}
-                <span class="hide-mobile">{{fa-icon 'info-circle'}}&nbsp; </span>
-                About
-            {{/link-to}}{{/active-link}}
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'credits'}}
-                <span class="hide-mobile">{{fa-icon 'star'}}&nbsp; </span>
-                Credits
-            {{/link-to}}{{/active-link}}
-            {{#active-link tagName='li' role="presentation"}}{{#link-to 'contact'}}
-                <span class="hide-mobile">{{fa-icon 'envelope'}}&nbsp; </span>
-                Contact
-            {{/link-to}}{{/active-link}}
-        </ul>
-    </nav>
-</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">{{fa-icon 'home'}} Gishtech</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          {{#active-link tagName='li'}}{{#link-to 'skills'}}{{fa-icon 'wrench'}} Skills{{/link-to}}{{/active-link}}
+          {{#active-link tagName='li'}}{{#link-to 'about'}}{{fa-icon 'info-circle'}} About{{/link-to}}{{/active-link}}
+          {{#active-link tagName='li'}}{{#link-to 'contact'}}{{fa-icon 'send'}} Contact{{/link-to}}{{/active-link}}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              {{#active-link tagName='li'}}{{#link-to 'credits'}}{{fa-icon 'star'}} Credits{{/link-to}}{{/active-link}}
+              {{#active-link tagName='li'}}{{#link-to 'logo'}}{{fa-icon 'tag'}} Logo{{/link-to}}{{/active-link}}
+            <li role="separator" class="divider"></li>
+              {{#active-link tagName='li'}}{{#link-to 'terms-and-conditions'}}{{fa-icon 'file'}} Terms and Conditions{{/link-to}}{{/active-link}}
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
