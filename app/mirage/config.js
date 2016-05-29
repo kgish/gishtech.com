@@ -7,7 +7,7 @@ export default function() {
                 id: 1,
                 attributes: {
                     title: 'From start to finish non-stop',
-                    description: 'I can perform well over the complete software development life cycle: design, user ' +
+                    description: 'I am quite familiar with the complete software development spectrum: design, user ' +
                                  'stories, bdd, programming, unit-testing, code review, uat, deployment, ' +
                                  'after-care, maintenance and trouble-shooting'
                 }
@@ -17,14 +17,14 @@ export default function() {
                 attributes: {
                     title: 'Team management is fun',
                     description: 'I take coaching and motivating teams very seriously, fostering the fun-factor and team ' +
-                    'spirit encouraging others to build stuff that we can be proud about'
+                    'spirit, encouraging others to build stuff that they can be proud to show'
                 }
             }, {
                 type: 'intros',
                 id: 3,
                 attributes: {
                     title: 'Straight-forward work ethos',
-                    description: 'I am pragmatic and believe in a hands-on mentality where rolling up your sleeves and getting the job done right the very first time is the name of the game'
+                    description: 'I am pragmatic and believe in a hands-on mentality where rolling up your sleeves and getting the job done right the first time is the name of the game'
                 }
             }, {
                 type: 'intros',
