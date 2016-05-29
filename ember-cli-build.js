@@ -19,12 +19,9 @@ module.exports = function(defaults) {
     app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', { destDir: 'assets' });
     app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 
-    // Velocity: https://github.com/julianshapiro/velocity
-    //app.import('bower_components/velocity/velocity.min.js');
-    //app.import('bower_components/velocity/velocity.ui.min.js');
-
-    app.import('node_modules/liquid-fire/node_modules/velocity-animate/velocity.min.js');
-    app.import('node_modules/liquid-fire/node_modules/velocity-animate/velocity.ui.min.js');
+    // Velocity: https://github.com/julianshapiro/velocity (bower install velocity)
+    app.import('bower_components/velocity/velocity.min.js');
+    app.import('bower_components/velocity/velocity.ui.min.js');
 
     return app.toTree();
 };

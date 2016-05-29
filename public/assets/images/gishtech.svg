@@ -1,0 +1,10 @@
+<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <title>Gishtech Logo</title>
+ <!-- Created by Kiffin Gish - Copyright 2016, All rights reserved. -->
+ <g>
+  <title>Gishtech Logo</title>
+  <rect id="midnightblue" x="10" y="10" height="210" width="210" stroke="white" stroke-width="0" fill="rgb(0,46,82)"/>
+  <rect id="darkcyan" x="85" y="85" height="150" width="150" stroke="white" stroke-width="10" fill="rgb(0,106,163)"/>
+  <rect id="firebrick" x="165" y="165"  height="80" width="80" stroke="white" stroke-width="10" fill="rgb(177,32,36)"/>
+ </g>
+</svg>
