@@ -18,31 +18,39 @@
 }
 
 #jumbotron-index {
-    background-image: url(/assets/images/banner-index.png);
+    background-image: url(/assets/images/banners/index.png);
 }
 
 #jumbotron-skills {
-    background-image: url(/assets/images/banner-skills.png);
+    background-image: url(/assets/images/banners/skills.png);
 }
 
 #jumbotron-about {
-    background-image: url(/assets/images/banner-about.png);
+    background-image: url(/assets/images/banners/about.png);
 }
 
 #jumbotron-contact {
-    background-image: url(/assets/images/banner-contact.png);
+    background-image: url(/assets/images/banners/contact.png);
 }
 
 #jumbotron-credits {
-    background-image: url(/assets/images/banner-credits.png);
+    background-image: url(/assets/images/banners/credits.png);
 }
 
 #jumbotron-logo {
-    background-image: url(/assets/images/banner-logo.png);
+    background-image: url(/assets/images/banners/logo.png);
 }
 
 #jumbotron-terms-and-conditions {
-    background-image: url(/assets/images/banner-terms-and-conditions.png);
+    background-image: url(/assets/images/banners/terms-and-conditions.png);
+}
+
+#jumbotron-repository {
+    background-image: url(/assets/images/banners/repository.png);
+}
+
+#jumbotron-links {
+    background-image: url(/assets/images/banners/links.png);
 }
 
 .marketing h4 {

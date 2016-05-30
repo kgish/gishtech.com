@@ -11,17 +11,38 @@ export default function(){
         this.reverse('toRight')
     );
     this.transition(
-        this.fromRoute('about'),
-        this.use('toLeft'),
-        this.reverse('toRight')
-    );
-    this.transition(
         this.fromRoute('contact'),
         this.use('toLeft'),
         this.reverse('toRight')
     );
     this.transition(
-        this.hasClass('jumbotron'),
-        this.use('crossFade')
+        this.fromRoute('about'),
+        this.use('toLeft'),
+        this.reverse('toRight')
+    );
+    this.transition(
+        this.fromRoute('links'),
+        this.use('toLeft'),
+        this.reverse('toRight')
+    );
+    this.transition(
+        this.fromRoute('credits'),
+        this.use('toLeft'),
+        this.reverse('toRight')
+    );
+    this.transition(
+        this.fromRoute('repository'),
+        this.use('toLeft'),
+        this.reverse('toRight')
+    );
+    this.transition(
+        this.fromRoute('logo'),
+        this.use('toLeft'),
+        this.reverse('toRight')
+    );
+    this.transition(
+        this.fromRoute('terms-and-conditions'),
+        this.use('toLeft'),
+        this.reverse('toRight')
     );
 }

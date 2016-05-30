@@ -12,6 +12,8 @@ Router.map(function() {
   this.route('terms-and-conditions');
   this.route('credits');
   this.route('logo');
+  this.route('repository');
+  this.route('links');
 });
 
 export default Router;
