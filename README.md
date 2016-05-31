@@ -45,7 +45,7 @@ By default `ember-cli-mirage` is only anabled for `development` and `test` envir
 
 ## Animation
 
-I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](httph://julian.com/research/velocity/) for the animation stuff. 
+I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](http://julian.com/research/velocity/) for the animation stuff. 
 
 The route transitions `to-left` and `to-right` use `{{liquid-outlet}}` and defining them in the `transitions.js` file:
 
