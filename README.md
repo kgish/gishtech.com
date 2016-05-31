@@ -43,6 +43,85 @@ if (environment === 'production') {
 
 By default `ember-cli-mirage` is only anabled for `development` and `test` environments.
 
+## Animation
+
+I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](httph://julian.com/research/velocity/) for the animation stuff. 
+
+The route transitions `to-left` and `to-right` use `{{liquid-outlet}}` and defining them in the `transitions.js` file:
+
+```javascript
+export default function(){
+    
+    var duration = 250;
+    
+    this.transition(
+        this.fromRoute('index'),
+        this.use('toLeft', { duration }),
+        this.reverse('toRight', { duration })
+    );
+    ...
+}
+```
+
+For the jumbotron banner `fade-in` across the complete application, I have defined a `routes/base.js` class where the
+animation is triggered in the `activate()` hook.
+
+
+```javascript
+import Ember from 'ember';
+import config from 'gishtech/config/environment';
+
+export default Ember.Route.extend({
+    activate() {
+        var banner = config.APP.animation.banner;
+        Ember.run.scheduleOnce('afterRender', this, function(){
+            Ember.$('.jumbotron').velocity(banner.action, { duration: banner.duration });
+        });
+    }
+});
+```
+
+All other routes are derived from the base.
+
+```javascript
+import BaseRoute from './base';
+
+export default BaseRoute.extend({
+    ...
+});
+```
+
+## Configuration
+
+The application behavior can be configured by modifying the `config/environment.js` file.
+
+```javascript
+module.exports = function(environment) {
+    var ENV = {
+        modulePrefix: 'gishtech',
+        ...
+        APP: {
+            animation: {
+                banner: {
+                    action: 'fadeIn',
+                    duration: 1000
+                }
+            }
+        }
+    };
+    ...
+    return ENV;
+};
+```
+
+```javascript
+import Ember from 'ember';
+import config from 'gishtech/config/environment';
+...
+var whatever = config.APP.whatever;
+```
+
+
 ## References
 
 While the following list of references is far from complete, it should nonetheless give you a good start for learning
@@ -56,6 +135,7 @@ more about new and interesting stuff.
 * [Ember.js](http://emberjs.com/) - Framework for creating ambitious web applications.
 * [Fontawesome](http://fontawesome.io/) - Scalable vector icons toolkit that can be customized using CSS.
 * [Liquid Fire](http://ember-animation.github.io/liquid-fire/) - Animations and transitions for ambitious Ember applications.
+* [Velocity.js](http://julian.com/research/velocity/) - Animation engine based on `jQuery.animate()` but much faster.
 * [Sass](http://sass-lang.com/) - Most mature, stable, and powerful professional grade CSS extension language in the world.
 
 ## Books

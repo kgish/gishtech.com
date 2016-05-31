@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import BaseRoute from './base';
 
-export default Ember.Route.extend({
+export default BaseRoute.extend({
     model() {
         return [
             { name: 'Ember.js',
@@ -9,8 +9,8 @@ export default Ember.Route.extend({
             { name: 'Liquid Fire',
               url: 'ember-animation.github.io/liquid-fire'
             },
-            { name: 'Fastboot',
-              url: 'www.ember-fastboot.com'
+            { name: 'Velocity.js',
+              url: 'http://julian.com/research/velocity/'
             },
             { name: 'Bootstrap',
               url: 'getbootstrap.com'

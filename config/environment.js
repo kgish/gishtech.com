@@ -14,6 +14,12 @@ module.exports = function(environment) {
         },
 
         APP: {
+            animation: {
+                banner: {
+                    action: 'fadeIn',
+                    duration: 1000
+                }
+            }
             // Here you can pass flags/options to your application instance
             // when it is created
         }
