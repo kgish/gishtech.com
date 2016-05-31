@@ -4,14 +4,19 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
     var app = new EmberApp(defaults, {
-      
+
         // npm install --save-dev ember-cli-inline-content
         inlineContent: {
             'favicons': {
                 file: './public/assets/images/favicons/favicons.txt'
             }
+        },
+        
+        // https://github.com/rickharrison/broccoli-asset-rev
+        fingerprint: {
+            generateAssetMap: true
         }
-      
+
     });
 
     // Bootstrap

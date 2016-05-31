@@ -384,4 +384,6 @@ export default function() {
             }]
         };
     });
+
+    this.passthrough('assets/assetMap.json');
 }
