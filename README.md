@@ -147,6 +147,12 @@ There are a number of great books out there about JavaScript and frameworks.
 * [Exploring ES6](https://leanpub.com/exploring-es6) - Axel Rauschmayer
 * [Rock and Roll with Ember.js](http://balinterdi.com/rock-and-roll-with-emberjs/) - Balint Erdi
 * [Speaking JavaScript](http://speakingjs.com/es5/) - Axel Rauschmayer
+* [Web Animation using JavaScript](http://www.amazon.com/Web-Animation-using-JavaScript-Develop/dp/0134096665) - Julian Shapiro
+
+## Videos
+
+* [Animating in Ember.js with Liquid Fire](https://www.youtube.com/watch?v=vq_BcIFM8Rc) - Presentation given by Edward Faulkner at the Silicon Valley Ember.js meetup.
+* [Animations with Liquid Fire](https://www.emberscreencasts.com/tags/liquid-fire) - Series of tutorials from the popular [Emberscreencasts](https://www.emberscreencasts.com/) by Jeffrey Biles.
 
 ## Author
 
