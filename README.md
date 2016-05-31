@@ -10,19 +10,19 @@ Have a look at [gishtech.com](http://www.gishtech.com) for the real mccoy.
 
 I decided to make this website public and share it on my github. That way other people who might be interested in 
 creating a similar website with the amazing [Ember.js Framework](http://emberjs.com) can study for themselves how I 
-did it. This is just a simple website really, advertising myself as an enthusiastic and eager developer hoping to
-find potential customer wanting ti hire me for full stack development work.
+did it. This is just a simple website really. Maybe by sharing it with others, I can advertise myself as an 
+enthusiastic and eager developer hoping to find potential customers wanting to hire me for full stack development work.
 
 ## Installation
 
-The installation of this website is quite straight forward.
+The installation of this website is pretty straight forward.
 
     $ git clone https://github.com/kgish/gishtech.com.git
     $ cd gishtech.com
     $ npm install
     $ ember server
     
-Running on production simply means executing the following build command:
+Running it on a production simply means executing the following build command:
 
     $ ember build --environment=production
     
@@ -43,9 +43,10 @@ if (environment === 'production') {
 
 By default `ember-cli-mirage` is only anabled for `development` and `test` environments.
 
+
 ## Animation
 
-I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](http://julian.com/research/velocity/) for the animation stuff. 
+I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](http://julian.com/research/velocity/) for the animation stuff. This was a lot of fun trying out.
 
 The route transitions `to-left` and `to-right` use `{{liquid-outlet}}` and defining them in the `transitions.js` file:
 
