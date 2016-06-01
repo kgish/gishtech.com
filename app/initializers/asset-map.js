@@ -20,15 +20,15 @@ export function initialize(container, application) {
                 return assetMap.assets[name];
             }
         });
-        var banners = [];
+        // var banners = [];
         for (var key in assetMap.assets) {
             var value = assetMap.assets[key];
             if (/^assets\/images\/banners\//.test(value)) {
-                banners.push(value);
+                // banners.push(value);
                 (new Image()).src = value;
             }
         }
-        console.log(JSON.stringify(banners));
+        // console.log(JSON.stringify(banners));
     }, function() {
         AssetMap.reopen({
             resolve: function(name) {
