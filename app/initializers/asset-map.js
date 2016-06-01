@@ -28,7 +28,7 @@ export function initialize(container, application) {
                 (new Image()).src = value;
             }
         }
-        //console.log(JSON.stringify(banners));
+        console.log(JSON.stringify(banners));
     }, function() {
         AssetMap.reopen({
             resolve: function(name) {
