@@ -9,7 +9,7 @@ export default BaseRoute.extend({
     activate() {
         this._super();
         Ember.run.scheduleOnce('afterRender', this, function(){
-            Ember.$('.intro-item').velocity('fadeIn', { duration: 1000 });
+            Ember.$('.intro-item').velocity('transition.bounceLeftIn', { stagger: 300, drag: true });
         });
     }
 });
