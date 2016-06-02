@@ -33,6 +33,13 @@ export default function() {
                     title: 'Lots and lots of testing',
                     description: 'I am a real stickler when it comes to testing, and where possible I introduce automated testing as early as possible in order to avoid introducing unnecessary design defects and bugs'
                 }
+            }, {
+                type: 'intros',
+                id: 5,
+                attributes: {
+                    title: 'Motto',
+                    description: 'My favorite motto to live by is: "You\'re never too old to learn new stuff"'
+                }
             }]
         };
     });
@@ -289,7 +296,7 @@ export default function() {
                 type: 'skills',
                 id: 32,
                 attributes: {
-                    name: 'Sass',
+                    name: 'Sass and Compass',
                     url: 'http://sass-lang.com/',
                     score: 1
                 }

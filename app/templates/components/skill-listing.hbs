@@ -8,7 +8,7 @@
 
 <div class="skills-list">
     {{#each randomSkills as |skill|}}
-        {{#if (or (eq filterScore 0) (eq filterScore skill.score))}}
+        {{#if skill.display}}
             {{skill-item item=skill icons=(eq filterScore 0)}}
         {{/if}}
     {{/each}}

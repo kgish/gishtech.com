@@ -53,6 +53,10 @@
     background-image: url(/assets/images/banners/links.png);
 }
 
+#jumbotron-page-not-found {
+    background-image: url(/assets/images/banners/page-not-found.png);
+}
+
 .marketing h4 {
     font-weight: bold;
 }

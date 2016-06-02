@@ -15,10 +15,13 @@ export default Ember.Component.extend({
     randomSkills: Ember.computed('skills', 'filterScore', function(){
         // We want to randomize the list of skills in order to make it less boring.
         var skills = this.get('skills'),
+            filterScore = this.get('filterScore'),
             s = [], o = [], res = [];
 
         skills.forEach(function(skill){
-            s.pushObject({ name: skill.get('name'), url: skill.get('url'), score: skill.get('score') });
+            var score = skill.get('score'),
+                display = filterScore === 0 || filterScore === score;
+            s.pushObject({ name: skill.get('name'), url: skill.get('url'), score: score, display: display });
         });
 
         for (var n = 0; n < s.length; n++) {
