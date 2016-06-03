@@ -127,7 +127,7 @@ var whatever = config.APP.whatever;
 Sometimes I try to be overly fancy, and one of my secret techniques for trying to achieve this is good old
 randomization. I use for item lists, namely intro sections and skills.
 
-Here is the component template that I use (replace `whatever` with whatever, e.g. `intro` or `skill`):
+Here is the component template that I use (replace `whatever` with whatever, e.g. `intro`, `skill` or `credit`):
 
 ```javascript
 import Ember from 'ember';
@@ -167,8 +167,9 @@ export default Ember.Component.extend({
 
 The objects that are pushed into the shuffle array depends on the attributes.
 
-    intro => {title, description}
-    skill => {name, score, url}
+    intro   => { title, description }
+    skill   => { name, score, url }
+    credit  => { name, url }
     
 In the template `whatever.hbs` we then iterate over the `randomWhatevers` instead of the `model`.
     

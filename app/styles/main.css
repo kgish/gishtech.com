@@ -82,6 +82,10 @@
     margin: 3px 5px 10px;
 }
 
+.credit-item {
+    margin-bottom: 10px;
+}
+
 .score {
     font-size: 8px;
 }

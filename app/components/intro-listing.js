@@ -28,7 +28,7 @@ export default Ember.Component.extend({
             res.pushObject(s[n]);
         });
 
-        // Ensure that the motto is always at the end of the list
+        // Ensure that the motto is always at the bottom of the list
         var motto = res.findBy('title', 'Motto');
         res.removeObject(motto);
         res.pushObject(motto);

@@ -399,6 +399,82 @@ export default function() {
             }]
         };
     });
+    
+    this.get('/credits', function() {
+        return {
+            data: [{
+                type: 'credits',
+                id: 1,
+                attributes: {
+                    name: 'Ember',
+                    url: 'emberjs.com'
+                }
+            }, {
+                type: 'credits',
+                id: 2,
+                attributes: {
+                    name: 'Liquid-fire',
+                    url: 'ember-animation.github.io/liquid-fire'
+                }
+            }, {
+                type: 'credits',
+                id: 3,
+                attributes: {
+                    name: 'Velocity',
+                    url: 'julian.com/research/velocity'
+                }
+            }, {
+                type: 'credits',
+                id: 4,
+                attributes: {
+                    name: 'Bootstrap',
+                    url: 'getbootstrap.com'
+                }
+            }, {
+                type: 'credits',
+                id: 5,
+                attributes: {
+                    name: 'Fontawesome',
+                    url: 'fontawesome.io'
+                }
+            }, {
+                type: 'credits',
+                id: 6,
+                attributes: {
+                    name: 'Sass',
+                    url: 'sass-lang.com'
+                }
+            }, {
+                type: 'credits',
+                id: 7,
+                attributes: {
+                    name: 'Ember-cli',
+                    url: 'ember-cli.com'
+                }
+            }, {
+                type: 'credits',
+                id: 8,
+                attributes: {
+                    name: 'Babel',
+                    url: 'babeljs.io'
+                }
+            }, {
+                type: 'credits',
+                id: 9,
+                attributes: {
+                    name: 'Npm',
+                    url: 'www.npmjs.com'
+                }
+            }, {
+                type: 'credits',
+                id: 10,
+                attributes: {
+                    name: 'Bower',
+                    url: 'bower.io'
+                }
+            }]
+        };
+    });
 
     this.passthrough('assets/assetMap.json');
 }

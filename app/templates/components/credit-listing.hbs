@@ -1,0 +1,19 @@
+<blockquote>
+    <div class="row credits">
+        <div class="col-lg-6">
+            {{#each randomCredits as |credit index|}}
+                {{#if (lt index (half-of model.length))}}
+                    {{credit-item item=credit}}
+                {{/if}}
+            {{/each}}
+        </div>
+
+        <div class="col-lg-6">
+            {{#each randomCredits as |credit index|}}
+                {{#if (gte index (half-of model.length))}}
+                    {{credit-item item=credit}}
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</blockquote>
