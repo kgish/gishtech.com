@@ -7,7 +7,8 @@
 </div>
 
 <div class="skills-list">
-    {{#each model as |skill|}}
+    {{!#each randomSkills as |skill|}}
+    {{#each skills as |skill|}}
         {{#liquid-if (or (eq filterScore 0) (eq skill.score filterScore)) class="skill-display"}}
             {{skill-item item=skill icons=(eq filterScore 0)}}
         {{/liquid-if}}

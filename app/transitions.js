@@ -7,10 +7,10 @@ export default function(){
         this.hasClass('skill-display'),
         this.toValue(true),
         this.use('crossFade', {duration}),
-        this.reverse('toLeft', {duration}),
-        this.debug()
+        this.reverse('toLeft', {duration})
+        //this.debug()
     );
-    
+
     this.transition(
         this.fromRoute('index'),
         this.use('toLeft', { duration }),
