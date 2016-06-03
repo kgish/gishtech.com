@@ -122,6 +122,53 @@ import config from 'gishtech/config/environment';
 var whatever = config.APP.whatever;
 ```
 
+## Randomization
+
+Sometimes I try to be overly fancy, and one of my secret techniques for trying to achieve this is good old
+randomization. I use for item lists, namely intro sections and skills.
+
+Here is the component template that I use (replace `whatever` with whatever, e.g. `intro` or `skill`):
+
+```javascript
+import Ember from 'ember';
+
+export default Ember.Component.extend({
+    classNames: ['whatever-listing'],
+
+    whatevers: Ember.computed.alias('model'),
+
+    randomWhatevers: Ember.computed('whatevers', function(){
+        // We want to randomize the list of whatevers in order to make it less boring.
+        var whatevers = this.get('whatevers'),
+            s = [], o = [], res = [];
+
+        whatevers.forEach(function(whatever){
+            s.pushObject({ attribute_1: whatever.get('attribute_1'), ... , attribute_n: whatever.get('attribute_n') });
+        });
+
+        for (var n = 0; n < s.length; n++) {
+            o.push(n);
+        }
+
+        for (var i = o.length; i; ) {
+            var j = parseInt(Math.random() * i), x = o[--i];
+            o[i] = o[j];
+            o[j] = x;
+        }
+
+        o.forEach(function(n) {
+            res.pushObject(s[n]);
+        });
+
+        return res;
+    })
+});
+```
+
+The objects that are pushed into the suffle array depends on the attributes.
+
+    intro => {title, description}
+    skill => {name, score, url}
 
 ## References
 
