@@ -8,7 +8,7 @@ export default BaseRoute.extend({
     activate() {
         this._super();
         Ember.run.scheduleOnce('afterRender', this, function(){
-            Ember.$('.intro-credit').velocity('transition.bounceLeftIn', { stagger: 300, drag: true });
+            Ember.$('.credit-item').velocity('transition.slideUpIn', { stagger: 100, drag: false });
         });
     }
 });

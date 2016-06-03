@@ -14,12 +14,12 @@ export default function(){
         this.reverse('toRight', { duration })
     );
     this.transition(
-        this.fromRoute('contact'),
+        this.fromRoute('about'),
         this.use('toLeft', { duration }),
         this.reverse('toRight', { duration })
     );
     this.transition(
-        this.fromRoute('about'),
+        this.fromRoute('contact'),
         this.use('toLeft', { duration }),
         this.reverse('toRight', { duration })
     );
