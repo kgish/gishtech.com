@@ -98,6 +98,15 @@
     color: firebrick;
 }
 
+.syntax-bash {
+    font-family: monospace;
+    white-space: pre;
+    padding: 5px;
+    background-color: #C4E4E8;
+    border: solid 1px darkgray;
+    color: #052C36;
+}
+
 @media only screen and (max-width: 768px) {
 
     .header > nav > ul.nav.nav-pills > li > a {

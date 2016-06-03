@@ -11,7 +11,7 @@ module.exports = function(defaults) {
                 file: './public/assets/images/favicons/favicons.txt'
             }
         },
-        
+
         // https://github.com/rickharrison/broccoli-asset-rev
         fingerprint: {
             generateAssetMap: true
@@ -19,12 +19,12 @@ module.exports = function(defaults) {
 
     });
 
-    // Bootstrap
+    // Bootstrap: http://getbootstrap.com/ (bower install bootstrap --save)
     app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
     app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', { destDir: 'assets' });
     app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 
-    // Velocity: https://github.com/julianshapiro/velocity (bower install velocity)
+    // Velocity: https://github.com/julianshapiro/velocity (bower install velocity --save-dev)
     app.import('bower_components/velocity/velocity.min.js');
     app.import('bower_components/velocity/velocity.ui.min.js');
 
