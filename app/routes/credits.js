@@ -3,23 +3,35 @@ import BaseRoute from './base';
 export default BaseRoute.extend({
     model() {
         return [
-            { name: 'Ember.js',
+            { name: 'Ember',
               url: 'emberjs.com'
             },
-            { name: 'Liquid Fire',
+            { name: 'Liquid-fire',
               url: 'ember-animation.github.io/liquid-fire'
             },
-            { name: 'Velocity.js',
-              url: 'http://julian.com/research/velocity/'
+            { name: 'Velocity',
+              url: 'julian.com/research/velocity'
             },
             { name: 'Bootstrap',
               url: 'getbootstrap.com'
             },
-            { name: 'Font Awesome',
+            { name: 'Fontawesome',
               url: 'fontawesome.io'
             },
             { name: 'Sass',
               url: 'sass-lang.com'
+            },
+            { name: 'Ember-cli',
+                url: 'ember-cli.com'
+            },
+            { name: 'Babel',
+                url: 'babeljs.io'
+            },
+            { name: 'Npm',
+                url: 'www.npmjs.com'
+            },
+            { name: 'Bower',
+                url: 'bower.io'
             }
         ];
     }
