@@ -66,7 +66,7 @@ export default function() {
                 type: 'skills',
                 id: 3,
                 attributes: {
-                    name: 'Backbone.js',
+                    name: 'Backbone',
                     url: 'http://backbonejs.org/',
                     score: 1
                 }
@@ -128,7 +128,7 @@ export default function() {
                 type: 'skills',
                 id: 11,
                 attributes: {
-                    name: 'Ember.js',
+                    name: 'Ember',
                     url: 'http://emberjs.com/',
                     score: 3
                 }
@@ -136,7 +136,7 @@ export default function() {
                 type: 'skills',
                 id: 12,
                 attributes: {
-                    name: 'Express.js',
+                    name: 'Express',
                     url: 'http://expressjs.com/',
                     score: 2
                 }
@@ -216,7 +216,7 @@ export default function() {
                 type: 'skills',
                 id: 22,
                 attributes: {
-                    name: 'Node.js',
+                    name: 'Node',
                     url: 'https://nodejs.org/',
                     score: 3
                 }
@@ -288,7 +288,7 @@ export default function() {
                 type: 'skills',
                 id: 31,
                 attributes: {
-                    name: 'Sails.js',
+                    name: 'Sails',
                     url: 'http://sailsjs.org/',
                     score: 1
                 }
@@ -336,7 +336,7 @@ export default function() {
                 type: 'skills',
                 id: 37,
                 attributes: {
-                    name: 'Velocity.js',
+                    name: 'Velocity',
                     url: 'http://julian.com/research/velocity/',
                     score: 1
                 }
