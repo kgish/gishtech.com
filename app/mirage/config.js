@@ -384,6 +384,14 @@ export default function() {
                 type: 'skills',
                 id: 43,
                 attributes: {
+                    name: 'Sinatra',
+                    url: 'http://www.sinatrarb.com/',
+                    score: 1
+                }
+            }, {
+                type: 'skills',
+                id: 44,
+                attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
                     score: 3

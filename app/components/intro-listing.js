@@ -2,9 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     classNames: ['intro-listing'],
-    
+
     intros: Ember.computed.alias('model'),
-    
+
     randomIntros: Ember.computed('intros', function(){
         // We want to randomize the list of intros in order to make it less boring.
         var intros = this.get('intros'),
@@ -27,6 +27,11 @@ export default Ember.Component.extend({
         o.forEach(function(n) {
             res.pushObject(s[n]);
         });
+
+        // Ensure that the motto is always at the end of the list
+        var motto = res.findBy('title', 'Motto');
+        res.removeObject(motto);
+        res.pushObject(motto);
 
         return res;
     })
