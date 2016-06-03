@@ -1,7 +1,15 @@
 // http://ember-animation.github.io/liquid-fire/#/
 export default function(){
-    
+
     var duration = 250;
+
+    this.transition(
+        this.hasClass('skill-display'),
+        this.toValue(true),
+        this.use('crossFade', {duration}),
+        this.reverse('toLeft', {duration}),
+        this.debug()
+    );
     
     this.transition(
         this.fromRoute('index'),
@@ -48,4 +56,5 @@ export default function(){
         this.use('toLeft', { duration }),
         this.reverse('toRight', { duration })
     );
+
 }
