@@ -1,0 +1,58 @@
+<form id="contact-form" role="form">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstname">Firstname *</label>
+                <input id="firstname" type="text" name="firstname" class="form-control">{{firstname}}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="lastname">Lastname *</label>
+                <input id="lastname" type="text" name="lastename" class="form-control">{{lastname}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input id="email" type="email" name="email" class="form-control">{{email}}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" name="phone" class="form-control">{{phone}}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" class="form-control" rows="6">{{message}}</textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+    </div>
+
+</form>

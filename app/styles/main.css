@@ -102,9 +102,15 @@
     font-family: monospace;
     white-space: pre;
     padding: 5px;
-    background-color: #C4E4E8;
+    background-color: lavender;
     border: solid 1px darkgray;
-    color: #052C36;
+    color:  #052C36;
+}
+
+#contact-form {
+    border: 2px solid firebrick;
+    padding: 10px;
+    background-color: lavender;
 }
 
 @media only screen and (max-width: 768px) {
