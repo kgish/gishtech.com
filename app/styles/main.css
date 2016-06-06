@@ -107,7 +107,7 @@
     color:  #052C36;
 }
 
-#contact-form {
+.contact-form form {
     border: 2px solid firebrick;
     padding: 10px;
     background-color: lavender;

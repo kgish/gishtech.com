@@ -1,58 +1,66 @@
-<form id="contact-form" role="form">
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group has-feedback {{if validFirstname 'has-success' 'has-error'}}">
-                <label for="firstname">Firstname *</label>
-                <input id="firstname" type="text" name="firstname" class="form-control">{{firstname}}
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group has-feedback {{if validLastname 'has-success' 'has-error'}}">
-                <label for="lastname">Lastname *</label>
-                <input id="lastname" type="text" name="lastename" class="form-control">{{lastname}}
-            </div>
-        </div>
+{{#if messageSent}}
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <p><strong>{{fa-icon 'thumbs-up' size='2'}} &nbsp; Thanks for the message, I'll get back to you right away.</strong></p>
     </div>
+{{else}}
+    <h4>Send me a message</h4>
+    <form role="form">
 
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group has-feedback {{if validEmail 'has-success' 'has-error'}}">
-                <label for="email">Email *</label>
-                <input id="email" type="email" name="email" class="form-control">{{email}}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group has-feedback {{if validFirstname 'has-success' 'has-error'}}">
+                    <label for="firstname">First name *</label>
+                    {{input id="firstname" type="text" name="firstname" class="form-control" placeholder="First name" value=model.firstname}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-feedback {{if validLastname 'has-success' 'has-error'}}">
+                    <label for="lastname">Last name *</label>
+                    {{input id="lastname" type="text" name="lastename" class="form-control" placeholder="Last name" value=model.lastname}}
+                </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-group has-feedback {{if validPhone 'has-success' 'has-error'}}">
-                <label for="phone">Phone</label>
-                <input id="phone" type="tel" name="phone" class="form-control">{{phone}}
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group has-feedback {{if validEmail 'has-success' 'has-error'}}">
+                    <label for="email">Email *</label>
+                    {{input id="email" type="email" name="email" class="form-control" placeholder="yourname@example.com" value=model.email}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group has-feedback {{if validPhone 'has-success' 'has-error'}}">
+                    <label for="phone">Phone</label>
+                    {{input id="phone" type="tel" name="phone" class="form-control" placeholder="+31 6 12 34 56 78" value=model.phone}}
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group has-feedback {{if validMessage 'has-success' 'has-error'}}">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" class="form-control" rows="6">{{message}}</textarea>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group has-feedback {{if validMessage 'has-success' 'has-error'}}">
+                    <label for="message">Message *</label>
+                    {{textarea id="message" name="message" class="form-control" rows="6" placeholder="At least ten words ..." value=model.message}}
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <input type="submit" class="btn btn-success btn-send" value="Send message" disabled={{disableSend}}>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success btn-send" value="Send message" {{action 'sendMessage'}} disabled={{disableSend}}>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                </div>
             </div>
         </div>
-    </div>
 
-</form>
+    </form>
+{{/if}}
