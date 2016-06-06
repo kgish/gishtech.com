@@ -7,7 +7,7 @@ export default BaseRoute.extend({
     },
     
     activate() {
-        this._super();
+        this._super.apply(this, arguments);
         Ember.run.scheduleOnce('afterRender', this, function(){
             Ember.$('.skill-item').velocity('transition.fadeIn', { stagger: 50 });
         });

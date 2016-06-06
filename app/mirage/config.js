@@ -399,7 +399,7 @@ export default function() {
             }]
         };
     });
-    
+
     this.get('/credits', function() {
         return {
             data: [{
