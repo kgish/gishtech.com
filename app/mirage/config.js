@@ -49,7 +49,7 @@ export default function() {
                 attributes: {
                     name: 'Agile',
                     url: 'https://en.wikipedia.org/wiki/Agile_software_development',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -57,7 +57,7 @@ export default function() {
                 attributes: {
                     name: 'Apache',
                     url: 'http://www.apache.org/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -65,7 +65,7 @@ export default function() {
                 attributes: {
                     name: 'Backbone',
                     url: 'http://backbonejs.org/',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -73,7 +73,7 @@ export default function() {
                 attributes: {
                     name: 'Bootstrap',
                     url: 'http://getbootstrap.com/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -81,7 +81,7 @@ export default function() {
                 attributes: {
                     name: 'C/C++',
                     url: 'http://www.cprogramming.com/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -89,7 +89,7 @@ export default function() {
                 attributes: {
                     name: 'CSS',
                     url: 'https://www.w3.org/Style/CSS/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -97,7 +97,7 @@ export default function() {
                 attributes: {
                     name: 'Continuous Delivery',
                     url: 'https://en.wikipedia.org/wiki/Continuous_delivery',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -105,7 +105,7 @@ export default function() {
                 attributes: {
                     name: 'ES6',
                     url: 'http://es6-features.org/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -113,21 +113,21 @@ export default function() {
                 attributes: {
                     name: 'Elixir',
                     url: 'http://elixir-lang.org/',
-                    score: 1}
+                    score: 2}
             }, {
                 type: 'skills',
                 id: 10,
                 attributes: {
                     name: 'Elm',
                     url: 'http://elm-lang.org/',
-                    score: 2}
+                    score: 3}
             }, {
                 type: 'skills',
                 id: 11,
                 attributes: {
                     name: 'Ember',
                     url: 'http://emberjs.com/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -135,7 +135,7 @@ export default function() {
                 attributes: {
                     name: 'Express',
                     url: 'http://expressjs.com/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -151,7 +151,7 @@ export default function() {
                 attributes: {
                     name: 'HTML5',
                     url: 'https://www.w3.org/TR/html5/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -167,7 +167,7 @@ export default function() {
                 attributes: {
                     name: 'JavaScript',
                     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -175,7 +175,7 @@ export default function() {
                 attributes: {
                     name: 'Jira',
                     url: 'https://www.atlassian.com/software/jira',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -183,7 +183,7 @@ export default function() {
                 attributes: {
                     name: 'Kanban',
                     url: 'https://en.wikipedia.org/wiki/Kanban',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -191,7 +191,7 @@ export default function() {
                 attributes: {
                     name: 'Linux',
                     url: 'http://www.linuxfoundation.org/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -199,7 +199,7 @@ export default function() {
                 attributes: {
                     name: 'MiniTest',
                     url: 'https://github.com/seattlerb/minitest',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -207,7 +207,7 @@ export default function() {
                 attributes: {
                     name: 'MySQL',
                     url: 'https://www.mysql.com/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -223,7 +223,7 @@ export default function() {
                 attributes: {
                     name: 'Perl',
                     url: 'https://www.perl.org/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -239,7 +239,7 @@ export default function() {
                 attributes: {
                     name: 'Python',
                     url: 'https://www.python.org/',
-                    score: 2
+                    score: 1
                 }
             }, {
                 type: 'skills',
@@ -255,7 +255,7 @@ export default function() {
                 attributes: {
                     name: 'RESTful API',
                     url: 'https://en.wikipedia.org/wiki/Representational_state_transfer',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -263,7 +263,7 @@ export default function() {
                 attributes: {
                     name: 'RSpec',
                     url: 'http://rspec.info/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -271,7 +271,7 @@ export default function() {
                 attributes: {
                     name: 'Ruby on Rails',
                     url: 'http://rubyonrails.org/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -279,7 +279,7 @@ export default function() {
                 attributes: {
                     name: 'Ruby',
                     url: 'https://www.ruby-lang.org/en/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -287,7 +287,7 @@ export default function() {
                 attributes: {
                     name: 'Sails',
                     url: 'http://sailsjs.org/',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -295,7 +295,7 @@ export default function() {
                 attributes: {
                     name: 'Sass and Compass',
                     url: 'http://sass-lang.com/',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -303,7 +303,7 @@ export default function() {
                 attributes: {
                     name: 'Scrum',
                     url: 'https://www.scrumalliance.org/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -311,7 +311,7 @@ export default function() {
                 attributes: {
                     name: 'Selenium',
                     url: 'http://www.seleniumhq.org/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -319,7 +319,7 @@ export default function() {
                 attributes: {
                     name: 'Team management',
                     url: 'https://en.wikipedia.org/wiki/Team_management',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -327,7 +327,7 @@ export default function() {
                 attributes: {
                     name: 'Test-Driven Development',
                     url: 'https://en.wikipedia.org/wiki/Test-driven_development',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -335,7 +335,7 @@ export default function() {
                 attributes: {
                     name: 'Velocity',
                     url: 'http://julian.com/research/velocity/',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -343,7 +343,7 @@ export default function() {
                 attributes: {
                     name: 'WebdriverIO',
                     url: 'http://webdriver.io/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -351,7 +351,7 @@ export default function() {
                 attributes: {
                     name: 'jQuery',
                     url: 'https://jquery.com/',
-                    score: 3
+                    score: 4
                 }
             }, {
                 type: 'skills',
@@ -359,7 +359,7 @@ export default function() {
                 attributes: {
                     name: 'Specification by Example',
                     url: 'https://en.wikipedia.org/wiki/Specification_by_example',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -367,7 +367,7 @@ export default function() {
                 attributes: {
                     name: 'Lua',
                     url: 'https://www.lua.org/',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -383,7 +383,7 @@ export default function() {
                 attributes: {
                     name: 'Sinatra',
                     url: 'http://www.sinatrarb.com/',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -391,15 +391,23 @@ export default function() {
                 attributes: {
                     name: 'Mongo',
                     url: 'https://www.mongodb.com/',
-                    score: 1
+                    score: 2
                 }
             }, {
                 type: 'skills',
                 id: 45,
                 attributes: {
+                    name: 'Mocha',
+                    url: 'http://mochajs.org/',
+                    score: 3
+                }
+            }, {
+                type: 'skills',
+                id: 46,
+                attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
-                    score: 3
+                    score: 4
                 }
             }]
         };
