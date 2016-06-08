@@ -392,6 +392,14 @@ export default function() {
                 type: 'skills',
                 id: 44,
                 attributes: {
+                    name: 'Mongo',
+                    url: 'https://www.mongodb.com/',
+                    score: 1
+                }
+            }, {
+                type: 'skills',
+                id: 45,
+                attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
                     score: 3
@@ -399,7 +407,7 @@ export default function() {
             }]
         };
     });
-    
+
     this.get('/credits', function() {
         return {
             data: [{
