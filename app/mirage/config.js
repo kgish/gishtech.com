@@ -7,17 +7,14 @@ export default function() {
                 id: 1,
                 attributes: {
                     title: 'From start to finish non-stop',
-                    description: 'I am quite familiar with the complete software development spectrum: design, user ' +
-                                 'stories, bdd, programming, unit-testing, code review, uat, deployment, ' +
-                                 'after-care, maintenance and trouble-shooting'
+                    description: 'I am quite familiar with the complete software development pipeline: design, user stories, bdd, programming, unit-testing, code review, uat, deployment, after-care, maintenance and trouble-shooting'
                 }
             }, {
                 type: 'intros',
                 id: 2,
                 attributes: {
                     title: 'Team management is fun',
-                    description: 'I take coaching and motivating teams very seriously, fostering the fun-factor and team ' +
-                    'spirit, encouraging others to build stuff that they can be proud to show'
+                    description: 'I take coaching and motivating teams very seriously, fostering the fun-factor and team spirit, encouraging others to build stuff that they can be proud to show'
                 }
             }, {
                 type: 'intros',
