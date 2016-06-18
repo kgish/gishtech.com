@@ -1,35 +1,18 @@
 import Ember from 'ember';
+import shuffleItemsMixin from '../mixins/shuffle-items';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(shuffleItemsMixin, {
     classNames: ['intro-listing'],
 
     intros: Ember.computed.alias('model'),
 
     randomIntros: Ember.computed('intros', function(){
-        // We want to randomize the list of intros in order to make it less boring.
-        var intros = this.get('intros'),
-            s = [], o = [], res = [];
-
-        intros.forEach(function(intro){
-            s.pushObject({ title: intro.get('title'), description: intro.get('description') });
-        });
-
-        for (var n = 0; n < s.length; n++) {
-            o.push(n);
-        }
-
-        for (var i = o.length; i; ) {
-            var j = parseInt(Math.random() * i), x = o[--i];
-            o[i] = o[j];
-            o[j] = x;
-        }
-
-        o.forEach(function(n) {
-            res.pushObject(s[n]);
-        });
+        // We want to randomize the list of intros in order to make life less boring.
+        this.shuffleItems('intros');
 
         // Ensure that the motto is always at the bottom of the list
-        var motto = res.findBy('title', 'Motto');
+        var res = this.get('intros'),
+            motto = res.findBy('title', 'Motto');
         res.removeObject(motto);
         res.pushObject(motto);
 

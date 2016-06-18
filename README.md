@@ -1,6 +1,7 @@
 # GISHTECH.COM
 
-Welcome to the new-and-improved gishtech website! I built it with emberjs v2.5.x, bootstrap, liquid fire and other fun stuff.
+Welcome to the new-and-improved gishtech website! I built it with emberjs v2.5.x, bootstrap, liquid fire, velocity and
+other fun stuff.
 
 Have a look at [gishtech.com](http://www.gishtech.com) for the real mccoy.
 
@@ -10,8 +11,10 @@ Have a look at [gishtech.com](http://www.gishtech.com) for the real mccoy.
 
 I decided to make this website public and share it on my github. That way other people who might be interested in 
 creating a similar website with the amazing [Ember.js Framework](http://emberjs.com) can study for themselves how I 
-did it. This is just a simple website really. Maybe by sharing it with others, I can advertise myself as an 
-enthusiastic and eager developer hoping to find potential customers wanting to hire me for full stack development work.
+did it. This is just a simple website really.
+
+Maybe by sharing it with others, I can advertise myself as an enthusiastic and eager developer hoping to find potential
+customers wanting to hire me for full stack development work.
 
 ## Installation
 
@@ -46,7 +49,8 @@ By default `ember-cli-mirage` is only anabled for `development` and `test` envir
 
 ## Animation
 
-I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](http://julian.com/research/velocity/) for the animation stuff. This was a lot of fun trying out.
+I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](http://julian.com/research/velocity/) 
+for the animation stuff. This was a lot of fun trying out.
 
 The route transitions `to-left` and `to-right` use `{{liquid-outlet}}` and defining them in the `transitions.js` file:
 
@@ -125,52 +129,51 @@ var whatever = config.APP.whatever;
 ## Randomization (shuffle)
 
 Sometimes I try to be overly fancy, and one of my secret techniques for trying to achieve this is good old
-randomization. I use for item lists, namely intro sections and skills.
+randomization. Makes life just a little bit less boring.
 
-Here is the component template that I use (replace `whatever` with whatever, e.g. `intro`, `skill` or `credit`):
+I use shuffling for item lists in the intro, skills and credits pages.
+
 
 ```javascript
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+export default Ember.Mixin.create({
+    shuffleItems(items) {
+        // We want to randomize the list of items in order to make life less boring.
+        this.get(items).forEach((item) => {
+            item._randomPosition = Math.random();
+        });
+        this.set(items, this.get(items).sortBy('_randomPosition'));
+    }
+});
+```
+
+Here is the template that I use (replace `whatever` with whatever, e.g. `intros`, `skills` or `credits`):
+
+```javascript
+import Ember from 'ember';
+import shuffleItemsMixin from '../mixins/shuffle-items';
+
+export default Ember.Component.extend(shuffleItemsMixin, {
     classNames: ['whatever-listing'],
 
     whatevers: Ember.computed.alias('model'),
 
     randomWhatevers: Ember.computed('whatevers', function(){
-        // We want to randomize the list of whatevers in order to make it less boring.
-        var whatevers = this.get('whatevers'),
-            s = [], o = [], res = [];
-
-        whatevers.forEach(function(whatever){
-            s.pushObject({ attr1: whatever.get('attr1'), ... , attrn: whatever.get('attrn') });
-        });
-
-        for (var n = 0; n < s.length; n++) {
-            o.push(n);
-        }
-
-        for (var i = o.length; i; ) {
-            var j = parseInt(Math.random() * i), x = o[--i];
-            o[i] = o[j];
-            o[j] = x;
-        }
-
-        o.forEach(function(n) {
-            res.pushObject(s[n]);
-        });
+        // We want to randomize the list of whatevers in order to make
+        // life a little less boring.
+        this.shuffleItems('whatevers');
+        
+        // Optionally do some fine-tuning here, e.g. keep certain items 
+        // in place at beginning or end.
+        var res = this.get('intros'),
+        ...
 
         return res;
     })
 });
 ```
 
-The objects that are pushed into the shuffle array depends on the attributes.
-
-    intro   => { title, description }
-    skill   => { name, score, url }
-    credit  => { name, url }
-    
 In the template `whatever.hbs` we then iterate over the `randomWhatevers` instead of the `model`.
     
 ```

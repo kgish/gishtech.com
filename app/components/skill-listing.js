@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import shuffleItemsMixin from '../mixins/shuffle-items';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(shuffleItemsMixin, {
     classNames: ['skill-listing'],
 
     filterScore: -1,
@@ -13,24 +14,18 @@ export default Ember.Component.extend({
     ],
 
     didInsertElement() {
-        this._shuffleSkills();
-        this.set('filterScore', 0);
+        Ember.run.schedule('afterRender', this, function(){
+            this.shuffleItems('skills');
+            this.set('filterScore', 0);
+        });
     },
 
     actions: {
         filterScore(n) {
             if (n !== this.get('filterScore')) {
-                this._shuffleSkills();
+                this.shuffleItems('skills');
                 this.set('filterScore', n);
             }
         }
-    },
-
-    _shuffleSkills() {
-        // We want to randomize the list of skills in order to make it less boring.
-        this.get('skills').forEach((skill) => {
-            skill._randomPosition = Math.random();
-        });
-        this.set('skills', this.get('skills').sortBy('_randomPosition'));
     }
 });
