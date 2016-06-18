@@ -1,9 +1,10 @@
 # GISHTECH.COM
 
-Welcome to the new-and-improved gishtech website! I built it with emberjs v2.5.x, bootstrap, liquid fire, velocity and
-other fun stuff.
+Welcome to the new-and-improved Gishtech website!
 
-Have a look at [gishtech.com](http://www.gishtech.com) for the real mccoy.
+I built the whole site using ember.js v2.5.0, bootstrap, liquid-fire, velocity, random-shuffle and other fun stuff.
+
+For those interested, the real mccoy can be viewed online at [gishtech.com](http://www.gishtech.com).
 
 ![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
 
@@ -11,14 +12,16 @@ Have a look at [gishtech.com](http://www.gishtech.com) for the real mccoy.
 
 I decided to make this website public and share it on my github. That way other people who might be interested in 
 creating a similar website with the amazing [Ember.js Framework](http://emberjs.com) can study for themselves how I 
-did it. This is just a simple website really.
+did it. This is just a simple website really, but with much potential.
 
 Maybe by sharing it with others, I can advertise myself as an enthusiastic and eager developer hoping to find potential
 customers wanting to hire me for full stack development work.
 
+And then again, maybe it's just an excuse to show off and fluff my feathers. Nothing with being proud, I guess.
+
 ## Installation
 
-The installation of this website is pretty straight forward.
+The installation of this website is pretty straight forward:
 
     $ git clone https://github.com/kgish/gishtech.com.git
     $ cd gishtech.com
