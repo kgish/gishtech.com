@@ -1,9 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    
-    activate: function() {
-        this._super.apply(this, arguments);
+    activate() {
+        this._super();
         Ember.run.scheduleOnce('afterRender', this, function() {
             // Bootstrap collapsible navigation bar
             Ember.$('.nav li a').on('click', function(){
