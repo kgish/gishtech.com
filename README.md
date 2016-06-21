@@ -203,13 +203,13 @@ of all the pages.
 {{! app/templates/application.hbs }}
 
 <div class="container">
-    <!- ... -->
+    <!-- ... -->
     {{header-banner
         title='Gishtech'
         subtitle='Advanced Software Development<br/>for the Web'
         routename=currentRouteName
     }}
-    <!- ... -->
+    <!-- ... -->
 </div>
 ```
 
@@ -228,7 +228,7 @@ As an example, assuming that we are navigating to the `about` page, the followin
 
 ```html
 <div class="jumbotron background-image-about">
-    <!- ... -->
+    <!-- ... -->
 </div>
 ```
 
@@ -299,7 +299,7 @@ about-c4ee817e7744249afd5aa27ea38c2fe5.png
 In order to be able to preload the image you will have to know what this name is. That's where asset maps come into
 play.
 
-[Broccili-asset-rev](https://github.com/rickharrison/broccoli-asset-rev) is a Broccoli plugin used in Ember to add 
+[Broccili-asset-rev](https://github.com/rickharrison/broccoli-asset-rev) is a Broccoli plugin used by Ember to add 
 fingerprint checksums to your files and update the source to reflect the new filenames. By default it does not
 generate as asset map, so you need to enable it by including the following option in `ember-cli-build.js`:
 
@@ -323,7 +323,6 @@ looks something like this:
     "assets/gishtech.css": "assets/gishtech-b02594f022d05d47f501235f717f4a9c.css",
     "assets/gishtech.js": "assets/gishtech-5550f84aebd53dda497f60eb64673e23.js",
     "assets/images/banners/about.png": "assets/images/banners/about-c4ee817e7744249afd5aa27ea38c2fe5.png",
-    /* ... */
     "assets/vendor.css": "assets/vendor-b38bb6e7ab9b40d82afd483da6ba7d55.css",
     "assets/vendor.js": "assets/vendor-c35d3b7d3611e1df8bc21df95b4909f1.js"
   },
@@ -332,11 +331,53 @@ looks something like this:
 ```
 
 Now all we have to do during the initialization is to access this file and map the original banner image name to the
-fingerprinted one:
+fingerprinted one.
+
+I chose to do this with an [ember initializer](https://guides.emberjs.com/v2.6.0/applications/initializers/) called
+`asset-map`:
 
 ```
+// app/initializers/asset-map.js
+import Ember from 'ember';
+export function initialize(container, application) {
+    var AssetMap = Ember.Object.extend();
 
+    var promise = new Ember.RSVP.Promise(function(resolve, reject) {
+        Ember.$.getJSON('assets/assetMap.json', resolve).fail(reject);
+    });
+
+    promise.then(function(assetMap) {
+        AssetMap.reopen({
+            assetMap: assetMap,
+            resolve: function(name) {
+                return assetMap.assets[name];
+            }
+        });
+        for (var key in assetMap.assets) {
+            var value = assetMap.assets[key];
+            // Filter out only banner images and preload.
+            if (/^assets\/images\/banners\//.test(value)) {
+                (new Image()).src = value;
+            }
+        }
+    }, function() {
+        // ...
+    }).then(function() {
+        // ...
+    });
+}
+
+export default {
+  name: 'asset-map',
+  initialize
+};
 ```
+
+For the complete code, ifeel free to have a look at (asset-map.js)[app/initializers/asset-map.js].
+
+Note: In later versions of Ember 2.x, the `initialize` method should take only one argument and you will more than
+likely see a deprecation warning. I haven't yet figured out how to refactor my version by replacing `container` with
+some other mechanism, so I'm open to any suggestions (thanks in advance).
 
 ## References
 
