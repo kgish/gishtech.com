@@ -64,7 +64,8 @@ production environment.
 I use the [Liquid Fire](http://ember-animation.github.io/liquid-fire/) addon as well as [Velocity.js](http://julian.com/research/velocity/) 
 for the animation stuff. This was a lot of fun trying out.
 
-The route transitions `to-left` and `to-right` use `{{liquid-outlet}}` and defining them in the `transitions.js` file:
+The route transitions `to-left` and `to-right` use `{{liquid-outlet}}` and they are defined in the `transitions.js` 
+file like this:
 
 ```javascript
 export default function(){
@@ -80,9 +81,8 @@ export default function(){
 }
 ```
 
-For the jumbotron banner `fade-in` across the complete application, I have defined a `routes/base.js` class where the
-animation is triggered in the `activate()` hook.
-
+For the jumbotron banner `fade-in` which occurs across the complete application (all pages), I have defined a 
+`routes/base.js` class where the animation is triggered in the `activate()` hook.
 
 ```javascript
 import Ember from 'ember';
@@ -98,7 +98,7 @@ export default Ember.Route.extend({
 });
 ```
 
-All other routes are derived from the base.
+All other routes are derived from the `base route` so they will include this `activate()` hook by default.
 
 ```javascript
 import BaseRoute from './base';
@@ -111,7 +111,8 @@ export default BaseRoute.extend({
 
 ## Configuration
 
-The application behavior can be configured by modifying the `config/environment.js` file.
+The application behavior can be configured by modifying the `config/environment.js` file. Here we have the options
+for animation:
 
 ```javascript
 module.exports = function(environment) {
@@ -132,6 +133,8 @@ module.exports = function(environment) {
 };
 ```
 
+Accessing these values elsewhere means importing `config` and using it accordingly.
+
 ```javascript
 import Ember from 'ember';
 import config from 'gishtech/config/environment';
@@ -142,10 +145,10 @@ var whatever = config.APP.whatever;
 
 ## Randomization (shuffle)
 
-Sometimes I try to be overly fancy, and one of my secret techniques for trying to achieve this is good old
-randomization. Makes life just a little bit less boring.
+Sometimes I get a bit carried away and try to be overly fancy. One of my favorite techniques for trying to achieve this
+is good old randomization. Makes life just a little bit less boring.
 
-I use shuffling for item lists in the intro, skills and credits pages.
+I use shuffling for randomly rearranging list items in the `intro`, `skills` and `credits` pages.
 
 ```javascript
 import Ember from 'ember';
@@ -161,7 +164,7 @@ export default Ember.Mixin.create({
 });
 ```
 
-Here is the template that I use (replace `whatever` with whatever, e.g. `intros`, `skills` or `credits`):
+Here is the template that I use (just replace `whatever` with whatever, e.g. `intros`, `skills` or `credits`):
 
 ```javascript
 import Ember from 'ember';
@@ -187,7 +190,8 @@ export default Ember.Component.extend(shuffleItemsMixin, {
 });
 ```
 
-In the template `whatever.hbs` we then iterate over the `randomWhatevers` instead of the `model`.
+In the template `whatever.hbs` (`intros`, `skills` or `credits`) we then iterate over the `randomWhatevers` instead 
+of the `model`.
     
 ```
 {{#each randomWhatevers as |whatever|}}
@@ -196,15 +200,18 @@ In the template `whatever.hbs` we then iterate over the `randomWhatevers` instea
 
 ```
 
+Pretty neat, huh?
+
 
 ## Background banner images
 
-At the top of every page appears a bootstrap `jumbotron` with a different background image covering it. In this section
-I will explain how this is accomplished using good old Sass and how I speed things up.
+At the top of every page appears a bootstrap `jumbotron` with a different background image covering it. In this 
+section, I will explain how this is accomplished using good old `Sass` and how I speed things up by preloading the 
+banner images.
 
 By preloading these images, navigating to each new page the first time performs much quicker and snappier.
 
-All of the banner images are kept in the `public/assets/images/banners` directory, each having 700x400 dimensions.
+All of the banner images are kept in the `public/assets/images/banners` directory, each having a 700x400 dimension.
 
 
 ### Definitions
@@ -238,7 +245,7 @@ Where the `header-banner` component template file looks like this:
 </div>
 ```
 
-As an example, assuming that we are navigating to the `about` page, the following is generated:
+As an example, assuming that we are navigating to the `about` page, then the following is generated:
 
 ```html
 <div class="jumbotron background-image-about">
@@ -246,7 +253,7 @@ As an example, assuming that we are navigating to the `about` page, the followin
 </div>
 ```
 
-Where the class `jumbotron` will have a background image covering the whole `div` like this:
+Where the class `jumbotron` will have a background image covering the whole `div` as defined by the styling:
 
 ```css
 /* app/styles/main.scss */
@@ -258,7 +265,7 @@ Where the class `jumbotron` will have a background image covering the whole `div
 }
 ```
 
-So how does this result in the correct banner image appearing? Very simple, Sass to the rescue!
+So how does this result in the correct banner image appearing? Very simple. Sass to the rescue!
 
 We start by defining a [@mixin directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins) in the 
 `globals.scss` file as follows:
@@ -297,8 +304,13 @@ Which is exactly what we wanted.
 ### Preloading images
 
 This section provides more technical detail into how the banner background images are preloaded during application
-initialization. The reason that I chose to do this was because I noticed that the first time each page was hit, there was a very
-noticeable delay while the image was being loaded.
+initialization. The reason that I chose to do this was because I noticed that the first time each page was hit, there 
+was a very noticeable delay while the image was being loaded.
+
+Let's get rid of that.
+
+(To be honest, I'm not sure that this is the best way to accomplish it, but it works. For all I know, there might be a
+hidden Ember.js capability floating around that I am unaware of)
 
 Preloading images using JavaScript is simple, just call:
 ```javascript
@@ -306,17 +318,19 @@ Preloading images using JavaScript is simple, just call:
 ```
 
 First of all, we need to know the value of `value` and that's exactly the problem with asset fingerprinting. On 
-production `ember build --environment=production` will generate fingerprinted names of all assets including images,
-meaning that the about banner image will be named something line:
+production `ember build --environment=production` will generate fingerprinted names of all assets including images.
+This means that the about banner image will be named something like:
 ```
 about-c4ee817e7744249afd5aa27ea38c2fe5.png
 ```
-In order to be able to preload the image you will have to know what this name is. That's where asset maps come into
-play.
+In order to be able to preload the image, you will have to know what this fingerprinted name is, not the original
+name. That's where asset maps come into play.
 
-[Broccili-asset-rev](https://github.com/rickharrison/broccoli-asset-rev) is a Broccoli plugin used by Ember.js to add 
-fingerprint checksums to your files and update the source to reflect the new filenames. By default it does not
-generate as asset map, so you need to enable it by including the following option in `ember-cli-build.js`:
+Let's have a look at [Broccili-asset-rev](https://github.com/rickharrison/broccoli-asset-rev) which is the Broccoli 
+plugin used by Ember.js to add fingerprint checksums to your files and update the source to reflect the new filenames.
+ 
+By default, it does not generate an asset map. You need to enable it by including the following `fingerprint` option
+in the `ember-cli-build.js` file:
 
 ```javascript
 var app = new EmberApp(defaults, {
@@ -327,10 +341,10 @@ var app = new EmberApp(defaults, {
 });
 ```
 
-No when the Ember.js application is built for production an assets map is written to the `dist` directory.
+Now when the Ember.js application is built for production, an assets map is written to the `dist` directory.
 
-The `dist/assets/assetMap.json` contains a mapping of the original file name with the new fingerprinted file name and
-looks something like this:
+The `dist/assets/assetMap.json` contains a mapping of the original file name with the new fingerprinted file name,
+ basically a list of key value pairs, and it looks something like this:
 
 ```json
 {
@@ -345,10 +359,10 @@ looks something like this:
 }
 ```
 
-Now all we have to do during the initialization is to access this file and map the original banner image name to the
-fingerprinted one.
+Now all we have to do during the initialization of the application is to access this file and map the original banner
+image name to the fingerprinted one, preloading the images on the fly.
 
-I chose to do this with an [Ember Initializer](https://guides.emberjs.com/v2.6.0/applications/initializers/) called
+I chose to do this by defining an [Ember Initializer](https://guides.emberjs.com/v2.6.0/applications/initializers/) called
 `asset-map`:
 
 ```
@@ -388,22 +402,22 @@ export default {
 };
 ```
 
-For the complete code, free to have a look at (asset-map.js)[app/initializers/asset-map.js].
+For the complete code, I encourage you to have a look at (asset-map.js)[app/initializers/asset-map.js].
 
 
 ### Notes
 
 In later versions of Ember.js, the `initialize` method should take only one argument and you will more than
 likely see a deprecation warning. I haven't yet figured out how to refactor my version by replacing `container` with
-some other mechanism, so I'm open to any suggestions (thanks in advance).
+some other mechanism, so I'm open to any suggestions on how to achieve this (thanks alot in advance).
 
 I realize that Sass also offers an advanced technique to preload images. However, I was never able to get it working in
-Ember.js with fingerprinting. For those interested, check out the following article: [Elegantly preload background images with Sass](http://yoranbrondsema.com/elegantly-preload-background-images-sass/).
+Ember.js with fingerprinting enabled. For those interested, check out the following article: [Elegantly preload background images with Sass](http://yoranbrondsema.com/elegantly-preload-background-images-sass/).
 
-I have to give credit to [ember-cli-inject-asset-map](https://github.com/jcaffey/ember-cli-inject-asset-map) by jcaffey
-who got me on the right track and made me think more.
+Additionally, I have to give credit to [ember-cli-inject-asset-map](https://github.com/jcaffey/ember-cli-inject-asset-map) by jcaffey
+who got me on the right track and made me think more deeply about the proper implementation.
 
-See also [Resolving fingerprinted assets using generateassetmap](http://discuss.emberjs.com/t/resolving-fingerprinted-assets-using-generateassetmap)
+See also my discussion on the Ember forum: [Resolving fingerprinted assets using generateassetmap](http://discuss.emberjs.com/t/resolving-fingerprinted-assets-using-generateassetmap).
 
 
 ## References
@@ -425,7 +439,7 @@ more about new and interesting stuff.
 
 ## Books
 
-There are a number of great books out there about JavaScript and frameworks.
+There are a number of great books out there covering advanced JavaScript and frameworks, just to name a few:
 
 * [Building Front-End Web Apps with Plain JavaScript](https://gumroad.com/l/YyWka) - Gerd Wagner
 * [Ember 101](https://leanpub.com/ember-cli-101) - Adolfo Builes
@@ -437,6 +451,8 @@ There are a number of great books out there about JavaScript and frameworks.
 
 
 ## Videos
+
+For the non-readers in the group, the following videos are a relaxing way to get more involved with the material:
 
 * [Animating in Ember.js with Liquid Fire](https://www.youtube.com/watch?v=vq_BcIFM8Rc) - Presentation given by Edward Faulkner at the Silicon Valley Ember.js meetup.
 * [Animations with Liquid Fire](https://www.emberscreencasts.com/tags/liquid-fire) - Series of tutorials from the popular [Emberscreencasts](https://www.emberscreencasts.com/) by Jeffrey Biles.
