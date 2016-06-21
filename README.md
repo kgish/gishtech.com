@@ -199,7 +199,7 @@ Here I present a number of files and definitions that hopefully explain better h
 embedded the `header-banner` component in the `application.hbs` template which ensures that it will appear at the top
 of all the pages.
 
-```
+```html
 {{! app/templates/application.hbs }}
 
 <div class="container">
@@ -215,7 +215,7 @@ of all the pages.
 
 Where the `header-banner` component template file looks like this: 
 
-```
+```html
 {{! app/templates/components/header-banner.hbs }}
 
 <div class="jumbotron background-image-{{routename}}">
@@ -226,7 +226,7 @@ Where the `header-banner` component template file looks like this:
 
 As an example, assuming that we are navigating to the `about` page, the following is generated:
 
-```
+```html
 <div class="jumbotron background-image-about">
     ...
 </div>
@@ -234,7 +234,7 @@ As an example, assuming that we are navigating to the `about` page, the followin
 
 Where the class `jumbotron` will have a background image covering the whole `div` like this:
 
-```
+```css
 /* app/styles/main.scss */
 .jumbotron {
     ...
@@ -249,7 +249,7 @@ So how does this result in the correct banner image appearing? Very simple, Sass
 We start by defining a [@mixin directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins) in the 
 `globals.scss` file as follows:
 
-```
+```scss
 /* app/styles/globals.scss */
 @mixin background-image($name) {
     .background-image-#{$name} {
@@ -260,18 +260,18 @@ We start by defining a [@mixin directive](http://sass-lang.com/documentation/fil
 
 In the `main.scss` file we import the `globals.scss` file and use the [@each directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive) in order to iterate over all of the pages.
 
-```
+```scss
 /* app/styles/main.scss */
 
 @import "globals";
 ...
-@each $name in about, contact, index, ... {
+@each $name in about, contact, credits, index, ... {
     @include background-image(#{$name});
 }
 ```
 
 So far example, the `about` page will result in the following:
-```
+```css
 .background-image-about {
     background-image: url(/assets/images/banners/about.png);
 }
@@ -290,13 +290,43 @@ Preloading images using JavaScript is simple, just call:
 (new Image()).src = value;
 ```
 
-First of all, we need to know the value of `value` and there's the problem with asset fingerprinting. On production
-`ember build --environment=production` will generate fingerprinted names of all assets including images. This means 
-that the about banner image will be named something line:
+First of all, we need to know the value of `value` and that's exactly the problem with asset fingerprinting. On 
+production `ember build --environment=production` will generate fingerprinted names of all assets including images,
+meaning that the about banner image will be named something line:
 ```
 about-c4ee817e7744249afd5aa27ea38c2fe5.png
 ```
-In order to be able to preload the image you will have to know what this name is.
+In order to be able to preload the image you will have to know what this name is. That's where asset maps come into
+play.
+
+
+// https://github.com/rickharrison/broccoli-asset-rev
+
+```javascript
+var app = new EmberApp(defaults, {
+    fingerprint: {
+        generateAssetMap: true
+    }
+    
+});
+```
+
+The `dist/assets/assetMap.json` contains a mapping of the original file name with the new fingerprinted file name and
+looks something like this:
+
+```json
+{
+  "assets": {
+    "assets/gishtech.css": "assets/gishtech-b02594f022d05d47f501235f717f4a9c.css",
+    "assets/gishtech.js": "assets/gishtech-5550f84aebd53dda497f60eb64673e23.js",
+    "assets/images/banners/about.png": "assets/images/banners/about-c4ee817e7744249afd5aa27ea38c2fe5.png",
+    ...
+    "assets/vendor.css": "assets/vendor-b38bb6e7ab9b40d82afd483da6ba7d55.css",
+    "assets/vendor.js": "assets/vendor-c35d3b7d3611e1df8bc21df95b4909f1.js"
+  },
+  "prepend": ""
+}
+```
 
 ## References
 
