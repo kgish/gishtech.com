@@ -4,7 +4,7 @@ Welcome to the new-and-improved Gishtech website!
 
 I built the whole site using ember.js v2.5.0, bootstrap, liquid-fire, velocity, random-shuffle and other fun stuff.
 
-For those interested, the real mccoy can be viewed online at [gishtech.com](http://www.gishtech.com).
+For those interested, the real McCoy can be viewed online at [gishtech.com](http://www.gishtech.com).
 
 ![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
 
@@ -196,7 +196,7 @@ All of the banner images are kept in the `public/assets/images/banners` director
 ### Definitions
 
 Here I present a number of files and definitions that hopefully explain better how things are setup. First of all, I've
-embeded the `header-banner` component in the `application.hbs` template which ensures that it will appear at the top
+embedded the `header-banner` component in the `application.hbs` template which ensures that it will appear at the top
 of all the pages.
 
 ```
@@ -277,14 +277,26 @@ So far example, the `about` page will result in the following:
 }
 ```
 
-Exactly what we wanted.
+Which is exactly what we wanted.
 
 ### Preloading images
 
 This section provides more technical detail into how the banner background images are preloaded during application
-initialization.
+initialization. The reason that I chose to do this was because I noticed that the first time each page was hit, there was a very
+noticeable delay while the image was being loaded.
 
-...
+Preloading images using JavaScript is simple, just call:
+```javascript
+(new Image()).src = value;
+```
+
+First of all, we need to know the value of `value` and there's the problem with asset fingerprinting. On production
+`ember build --environment=production` will generate fingerprinted names of all assets including images. This means 
+that the about banner image will be named something line:
+```
+about-c4ee817e7744249afd5aa27ea38c2fe5.png
+```
+In order to be able to preload the image you will have to know what this name is.
 
 ## References
 
