@@ -5,6 +5,13 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
     var app = new EmberApp(defaults, {
 
+        // Bootstrap with Sass
+        sassOptions: {
+            includePaths: [
+                'bower_components/bootstrap-sass/assets/stylesheets'
+            ]
+        },
+
         // npm install --save-dev ember-cli-inline-content
         inlineContent: {
             'favicons': {
@@ -20,8 +27,8 @@ module.exports = function(defaults) {
     });
 
     // Bootstrap: http://getbootstrap.com/ (bower install bootstrap --save)
-    app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
-    app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', { destDir: 'assets' });
+    // app.import('bower_components/bootstrap/dist/css/bootstrap.min.css');
+    // app.import('bower_components/bootstrap/dist/css/bootstrap.css.map', { destDir: 'assets' });
     app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 
     // Velocity: https://github.com/julianshapiro/velocity (bower install velocity --save-dev)

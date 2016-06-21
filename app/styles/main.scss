@@ -2,19 +2,18 @@
     margin-bottom: 0;
     color: white;
     border: firebrick solid 5px;
-    background-position: 0% 25%;
+    background: no-repeat 0 25%;
     background-size: cover;
-    background-repeat: no-repeat;
-}
 
-.jumbotron h1 {
-    text-shadow: 4px 4px black;
-    font-weight: bold
-}
+    h1 {
+        text-shadow: 4px 4px black;
+        font-weight: bold
+    }
 
-.jumbotron p {
-    text-shadow: 2px 2px black;
-    font-weight: bold
+    p {
+        text-shadow: 2px 2px black;
+        font-weight: bold
+    }
 }
 
 #jumbotron-index {
