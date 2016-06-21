@@ -2,7 +2,7 @@
 
 Welcome to the new-and-improved Gishtech website!
 
-I built the whole site using ember.js v2.5.0, bootstrap, liquid-fire, velocity, random-shuffle and other fun stuff.
+I built this whole site using Ember.js v2.5.0, bootstrap, liquid-fire, velocity.js, random-shuffle and other fun stuff.
 
 For those interested, the real McCoy can be viewed online at [gishtech.com](http://www.gishtech.com).
 
@@ -373,11 +373,21 @@ export default {
 };
 ```
 
-For the complete code, ifeel free to have a look at (asset-map.js)[app/initializers/asset-map.js].
+For the complete code, free to have a look at (asset-map.js)[app/initializers/asset-map.js].
 
-Note: In later versions of Ember 2.x, the `initialize` method should take only one argument and you will more than
+### Notes
+
+In later versions of Ember 2.x, the `initialize` method should take only one argument and you will more than
 likely see a deprecation warning. I haven't yet figured out how to refactor my version by replacing `container` with
 some other mechanism, so I'm open to any suggestions (thanks in advance).
+
+I realize that Sass also offers an advanced technique to preload images. However, I was never able to get it working in
+Ember.js with fingerprinting. For those interested, check out the following article: [Elegantly preload background images with Sass](http://yoranbrondsema.com/elegantly-preload-background-images-sass/).
+
+I have to give credit to [ember-cli-inject-asset-map](https://github.com/jcaffey/ember-cli-inject-asset-map) by jcaffey
+who got me on the right track and made me think more.
+
+See also [Resolving fingerprinted assets using generateassetmap](http://discuss.emberjs.com/t/resolving-fingerprinted-assets-using-generateassetmap)
 
 ## References
 
