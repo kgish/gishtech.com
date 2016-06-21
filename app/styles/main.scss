@@ -1,7 +1,9 @@
+@import "globals";
+
 .jumbotron {
     margin-bottom: 0;
     color: white;
-    border: firebrick solid 5px;
+    border: $color-tertiary solid 5px;
     background: no-repeat 0 25%;
     background-size: cover;
 
@@ -16,48 +18,19 @@
     }
 }
 
-#jumbotron-index {
-    background-image: url(/assets/images/banners/index.png);
-}
-
-#jumbotron-skills {
-    background-image: url(/assets/images/banners/skills.png);
-}
-
-#jumbotron-about {
-    background-image: url(/assets/images/banners/about.png);
-}
-
-#jumbotron-contact {
-    background-image: url(/assets/images/banners/contact.png);
-}
-
-#jumbotron-credits {
-    background-image: url(/assets/images/banners/credits.png);
-}
-
-#jumbotron-logo {
-    background-image: url(/assets/images/banners/logo.png);
-}
-
-#jumbotron-terms-and-conditions {
-    background-image: url(/assets/images/banners/terms-and-conditions.png);
-}
-
-#jumbotron-repository {
-    background-image: url(/assets/images/banners/repository.png);
-}
-
-#jumbotron-links {
-    background-image: url(/assets/images/banners/links.png);
-}
-
-#jumbotron-page-not-found {
-    background-image: url(/assets/images/banners/page-not-found.png);
-}
-
-.marketing h4 {
-    font-weight: bold;
+@each $name in
+    about,
+    contact,
+    credits,
+    index,
+    links,
+    logo,
+    page-not-found,
+    repository,
+    skills,
+    terms-and-conditions
+{
+    @include background-image(#{$name});
 }
 
 .intro-item {
@@ -74,9 +47,7 @@
 
 .skills-scores a {
     font-weight: bold;
-    margin: 3px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 10px 3px 10px;
 }
 
 .skill-item a {
@@ -94,7 +65,7 @@
 }
 
 .heart {
-    color: firebrick;
+    color: $color-tertiary;
 }
 
 .syntax-bash {

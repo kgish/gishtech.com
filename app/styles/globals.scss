@@ -1,0 +1,9 @@
+$color-primary: midnightblue;
+$color-secondary: darkcyan;
+$color-tertiary: firebrick;
+
+@mixin background-image($name) {
+    .background-image-#{$name} {
+        background-image: url(/assets/images/banners/#{$name}.png);
+    }
+}
