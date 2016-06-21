@@ -1,38 +1,45 @@
 # GISHTECH.COM
 
-Welcome to the new-and-improved Gishtech website!
+Welcome to the new-and-improved Gishtech homepage!
 
-I built this whole site using Ember.js v2.5.0, bootstrap, liquid-fire, velocity.js, random-shuffle and other fun stuff.
+I built this whole website using good old Ember.js, Bootstrap, Liquid-fire, Velocity.js, Random-shuffle and a bunch of
+other fun stuff.
 
-For those interested, the real McCoy can be viewed online at [gishtech.com](http://www.gishtech.com).
+For those of you interested, the real McCoy can be viewed online at [gishtech.com](http://www.gishtech.com).
 
 ![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
 
 ## Introduction
 
-I decided to make this website public and share it on my github. That way other people who might be interested in 
-creating a similar website with the amazing [Ember.js Framework](http://emberjs.com) can study for themselves how I 
-did it. This is just a simple website really, but with much potential.
+I decided to make this website public by sharing it on my Github. That way other people who might be interested in 
+creating a similar website with the amazing [Ember.js Framework](http://emberjs.com) can study and learn for
+themselves how I did it. 
 
-Maybe by sharing it with others, I can advertise myself as an enthusiastic and eager developer hoping to find potential
-customers wanting to hire me for full stack development work.
+I'm not claiming that I created the "ideal" Ember.js application. Indeed, although I've acquired significant experience
+under my belt, using it once again was yet another learning experience for me that I'd like to share. This is just a 
+simple website really, but built on a firm foundation it has much potential for improvement!
 
-And then again, maybe it's just an excuse to show off and fluff my feathers. Nothing with being proud, I guess.
+Maybe by sharing it with others, I can advertise myself as an enthusiastic and eager developer who can provide quality
+work. Reach out and attract potential customers wanting to hire me for full stack development work. Fingers crossed.
+
+Then again, maybe it's just an excuse to show off and fluff my feathers. Nothing wrong with being proud of hard work,
+I guess.
 
 ## Installation
 
-The installation of this website is pretty straight forward:
+First steps first. The installation of this website in a development environment is pretty straight forward:
 
     $ git clone https://github.com/kgish/gishtech.com.git
     $ cd gishtech.com
     $ npm install
     $ ember server
     
-Running it on a production simply means executing the following build command:
+In order to irun it on a production environment, simply execute the following build command:
 
     $ ember build --environment=production
     
-and then ensuring that the `dist` directory is copied or made available. So for `apache` you might have:
+and then ensure that the `dist` directory is copied or made available for visitors to the web server. So for `apache`
+you might have:
 
     DocumentRoot /home/deploy/gishtech/latest/dist
     
@@ -46,8 +53,8 @@ if (environment === 'production') {
     };
 }
 ```
-
-By default `ember-cli-mirage` is only anabled for `development` and `test` environments.
+By default `ember-cli-mirage` is only enabled for `development` and `test` environments. I also have it setup for the
+production environment.
 
 
 ## Animation
@@ -188,8 +195,9 @@ In the template `whatever.hbs` we then iterate over the `randomWhatevers` instea
 ## Background banner images
 
 At the top of every page appears a bootstrap `jumbotron` with a different background image covering it. In this section
-I will explain how this is accomplished using good old Sass and how I speed things up. By preloading these images, 
-navigating to each new page the first time performs much quicker and snappier.
+I will explain how this is accomplished using good old Sass and how I speed things up.
+
+By preloading these images, navigating to each new page the first time performs much quicker and snappier.
 
 All of the banner images are kept in the `public/assets/images/banners` directory, each having 700x400 dimensions.
 
@@ -299,7 +307,7 @@ about-c4ee817e7744249afd5aa27ea38c2fe5.png
 In order to be able to preload the image you will have to know what this name is. That's where asset maps come into
 play.
 
-[Broccili-asset-rev](https://github.com/rickharrison/broccoli-asset-rev) is a Broccoli plugin used by Ember to add 
+[Broccili-asset-rev](https://github.com/rickharrison/broccoli-asset-rev) is a Broccoli plugin used by Ember.js to add 
 fingerprint checksums to your files and update the source to reflect the new filenames. By default it does not
 generate as asset map, so you need to enable it by including the following option in `ember-cli-build.js`:
 
@@ -312,7 +320,7 @@ var app = new EmberApp(defaults, {
 });
 ```
 
-No when the ember application is built for production an assets map is written to the `dist` directory.
+No when the Ember.js application is built for production an assets map is written to the `dist` directory.
 
 The `dist/assets/assetMap.json` contains a mapping of the original file name with the new fingerprinted file name and
 looks something like this:
@@ -333,7 +341,7 @@ looks something like this:
 Now all we have to do during the initialization is to access this file and map the original banner image name to the
 fingerprinted one.
 
-I chose to do this with an [ember initializer](https://guides.emberjs.com/v2.6.0/applications/initializers/) called
+I chose to do this with an [Ember Initializer](https://guides.emberjs.com/v2.6.0/applications/initializers/) called
 `asset-map`:
 
 ```
@@ -377,7 +385,7 @@ For the complete code, free to have a look at (asset-map.js)[app/initializers/as
 
 ### Notes
 
-In later versions of Ember 2.x, the `initialize` method should take only one argument and you will more than
+In later versions of Ember.js, the `initialize` method should take only one argument and you will more than
 likely see a deprecation warning. I haven't yet figured out how to refactor my version by replacing `container` with
 some other mechanism, so I'm open to any suggestions (thanks in advance).
 
