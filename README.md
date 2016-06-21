@@ -67,7 +67,7 @@ export default function(){
         this.use('toLeft', { duration }),
         this.reverse('toRight', { duration })
     );
-    ...
+    // ...
 }
 ```
 
@@ -95,7 +95,7 @@ All other routes are derived from the base.
 import BaseRoute from './base';
 
 export default BaseRoute.extend({
-    ...
+    // ...
 });
 ```
 
@@ -107,7 +107,7 @@ The application behavior can be configured by modifying the `config/environment.
 module.exports = function(environment) {
     var ENV = {
         modulePrefix: 'gishtech',
-        ...
+        // ...
         APP: {
             animation: {
                 banner: {
@@ -117,7 +117,7 @@ module.exports = function(environment) {
             }
         }
     };
-    ...
+    // ...
     return ENV;
 };
 ```
@@ -125,7 +125,7 @@ module.exports = function(environment) {
 ```javascript
 import Ember from 'ember';
 import config from 'gishtech/config/environment';
-...
+// ...
 var whatever = config.APP.whatever;
 ```
 
@@ -169,7 +169,7 @@ export default Ember.Component.extend(shuffleItemsMixin, {
         // Optionally do some fine-tuning here, e.g. keep certain items 
         // in place at beginning or end.
         var res = this.get('intros'),
-        ...
+        // ...
 
         return res;
     })
@@ -203,13 +203,13 @@ of all the pages.
 {{! app/templates/application.hbs }}
 
 <div class="container">
-    ...
+    <!- ... -->
     {{header-banner
         title='Gishtech'
         subtitle='Advanced Software Development<br/>for the Web'
         routename=currentRouteName
     }}
-    ...
+    <!- ... -->
 </div>
 ```
 
@@ -228,7 +228,7 @@ As an example, assuming that we are navigating to the `about` page, the followin
 
 ```html
 <div class="jumbotron background-image-about">
-    ...
+    <!- ... -->
 </div>
 ```
 
@@ -237,10 +237,10 @@ Where the class `jumbotron` will have a background image covering the whole `div
 ```css
 /* app/styles/main.scss */
 .jumbotron {
-    ...
+    /* ... */
     background: no-repeat 0 25%;
     background-size: cover;
-    ...
+    /* ... */
 }
 ```
 
@@ -264,8 +264,8 @@ In the `main.scss` file we import the `globals.scss` file and use the [@each dir
 /* app/styles/main.scss */
 
 @import "globals";
-...
-@each $name in about, contact, credits, index, ... {
+/* ... */
+@each $name in about, contact, credits, index/*, ... */ {
     @include background-image(#{$name});
 }
 ```
@@ -299,17 +299,20 @@ about-c4ee817e7744249afd5aa27ea38c2fe5.png
 In order to be able to preload the image you will have to know what this name is. That's where asset maps come into
 play.
 
-
-// https://github.com/rickharrison/broccoli-asset-rev
+[Broccili-asset-rev](https://github.com/rickharrison/broccoli-asset-rev) is a Broccoli plugin used in Ember to add 
+fingerprint checksums to your files and update the source to reflect the new filenames. By default it does not
+generate as asset map, so you need to enable it by including the following option in `ember-cli-build.js`:
 
 ```javascript
 var app = new EmberApp(defaults, {
+    // ...
     fingerprint: {
         generateAssetMap: true
     }
-    
 });
 ```
+
+No when the ember application is built for production an assets map is written to the `dist` directory.
 
 The `dist/assets/assetMap.json` contains a mapping of the original file name with the new fingerprinted file name and
 looks something like this:
@@ -320,12 +323,19 @@ looks something like this:
     "assets/gishtech.css": "assets/gishtech-b02594f022d05d47f501235f717f4a9c.css",
     "assets/gishtech.js": "assets/gishtech-5550f84aebd53dda497f60eb64673e23.js",
     "assets/images/banners/about.png": "assets/images/banners/about-c4ee817e7744249afd5aa27ea38c2fe5.png",
-    ...
+    /* ... */
     "assets/vendor.css": "assets/vendor-b38bb6e7ab9b40d82afd483da6ba7d55.css",
     "assets/vendor.js": "assets/vendor-c35d3b7d3611e1df8bc21df95b4909f1.js"
   },
   "prepend": ""
 }
+```
+
+Now all we have to do during the initialization is to access this file and map the original banner image name to the
+fingerprinted one:
+
+```
+
 ```
 
 ## References
