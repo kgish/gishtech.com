@@ -9,6 +9,7 @@ For those of you interested, the real McCoy can be viewed online at [gishtech.co
 
 ![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
 
+
 ## Introduction
 
 I decided to make this website public by sharing it on my Github. That way other people who might be interested in 
@@ -24,6 +25,7 @@ work. Reach out and attract potential customers wanting to hire me for full stac
 
 Then again, maybe it's just an excuse to show off and fluff my feathers. Nothing wrong with being proud of hard work,
 I guess.
+
 
 ## Installation
 
@@ -106,6 +108,7 @@ export default BaseRoute.extend({
 });
 ```
 
+
 ## Configuration
 
 The application behavior can be configured by modifying the `config/environment.js` file.
@@ -135,6 +138,7 @@ import config from 'gishtech/config/environment';
 // ...
 var whatever = config.APP.whatever;
 ```
+
 
 ## Randomization (shuffle)
 
@@ -192,6 +196,7 @@ In the template `whatever.hbs` we then iterate over the `randomWhatevers` instea
 
 ```
 
+
 ## Background banner images
 
 At the top of every page appears a bootstrap `jumbotron` with a different background image covering it. In this section
@@ -200,6 +205,7 @@ I will explain how this is accomplished using good old Sass and how I speed thin
 By preloading these images, navigating to each new page the first time performs much quicker and snappier.
 
 All of the banner images are kept in the `public/assets/images/banners` directory, each having 700x400 dimensions.
+
 
 ### Definitions
 
@@ -286,6 +292,7 @@ So far example, the `about` page will result in the following:
 ```
 
 Which is exactly what we wanted.
+
 
 ### Preloading images
 
@@ -383,6 +390,7 @@ export default {
 
 For the complete code, free to have a look at (asset-map.js)[app/initializers/asset-map.js].
 
+
 ### Notes
 
 In later versions of Ember.js, the `initialize` method should take only one argument and you will more than
@@ -396,6 +404,7 @@ I have to give credit to [ember-cli-inject-asset-map](https://github.com/jcaffey
 who got me on the right track and made me think more.
 
 See also [Resolving fingerprinted assets using generateassetmap](http://discuss.emberjs.com/t/resolving-fingerprinted-assets-using-generateassetmap)
+
 
 ## References
 
@@ -413,6 +422,7 @@ more about new and interesting stuff.
 * [Velocity.js](http://julian.com/research/velocity/) - Animation engine based on `jQuery.animate()` but much faster.
 * [Sass](http://sass-lang.com/) - Most mature, stable, and powerful professional grade CSS extension language in the world.
 
+
 ## Books
 
 There are a number of great books out there about JavaScript and frameworks.
@@ -425,10 +435,12 @@ There are a number of great books out there about JavaScript and frameworks.
 * [Web Animation using JavaScript](http://www.amazon.com/Web-Animation-using-JavaScript-Develop/dp/0134096665) - Julian Shapiro
 * [Sass and Compass in Action](https://www.manning.com/books/sass-and-compass-in-action) - Wynn Netherland et al
 
+
 ## Videos
 
 * [Animating in Ember.js with Liquid Fire](https://www.youtube.com/watch?v=vq_BcIFM8Rc) - Presentation given by Edward Faulkner at the Silicon Valley Ember.js meetup.
 * [Animations with Liquid Fire](https://www.emberscreencasts.com/tags/liquid-fire) - Series of tutorials from the popular [Emberscreencasts](https://www.emberscreencasts.com/) by Jeffrey Biles.
+
 
 ## Author
 
