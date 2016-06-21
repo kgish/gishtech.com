@@ -191,6 +191,8 @@ At the top of every page appears a bootstrap `jumbotron` with a different backgr
 I will explain how this is accomplished using good old Sass and how I speed things up. By preloading these images, 
 navigating to each new page the first time performs much quicker and snappier.
 
+All of the banner images are kept in the `public/assets/images/banners` directory, each having 700x400 dimensions.
+
 ### Definitions
 
 Here I present a number of files and definitions that hopefully explain better how things are setup. First of all, I've
@@ -256,7 +258,7 @@ We start by defining a [@mixin directive](http://sass-lang.com/documentation/fil
 }
 ```
 
-In the `main.scss` file we import the `globals.scss` file and use the [@each directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive) and iterate over all of the pages.
+In the `main.scss` file we import the `globals.scss` file and use the [@each directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive) in order to iterate over all of the pages.
 
 ```
 /* app/styles/main.scss */
@@ -268,7 +270,7 @@ In the `main.scss` file we import the `globals.scss` file and use the [@each dir
 }
 ```
 
-So far example, the `about`` page will result in the following:
+So far example, the `about` page will result in the following:
 ```
 .background-image-about {
     background-image: url(/assets/images/banners/about.png);
