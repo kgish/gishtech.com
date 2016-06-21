@@ -136,7 +136,6 @@ randomization. Makes life just a little bit less boring.
 
 I use shuffling for item lists in the intro, skills and credits pages.
 
-
 ```javascript
 import Ember from 'ember';
 
@@ -183,7 +182,107 @@ In the template `whatever.hbs` we then iterate over the `randomWhatevers` instea
 {{#each randomWhatevers as |whatever|}}
     {{whatever-item item=whatever}}
 {{/each}}
+
 ```
+
+## Background banner images
+
+At the top of every page appears a bootstrap `jumbotron` with a different background image covering it. In this section
+I will explain how this is accomplished using good old Sass and how I speed things up. By preloading these images, 
+navigating to each new page the first time performs much quicker and snappier.
+
+### Definitions
+
+Here I present a number of files and definitions that hopefully explain better how things are setup. First of all, I've
+embeded the `header-banner` component in the `application.hbs` template which ensures that it will appear at the top
+of all the pages.
+
+```
+{{! app/templates/application.hbs }}
+
+<div class="container">
+    ...
+    {{header-banner
+        title='Gishtech'
+        subtitle='Advanced Software Development<br/>for the Web'
+        routename=currentRouteName
+    }}
+    ...
+</div>
+```
+
+Where the `header-banner` component template file looks like this: 
+
+```
+{{! app/templates/components/header-banner.hbs }}
+
+<div class="jumbotron background-image-{{routename}}">
+    <h1>{{{title}}}</h1>
+    <p>{{{subtitle}}}</p>
+</div>
+```
+
+As an example, assuming that we are navigating to the `about` page, the following is generated:
+
+```
+<div class="jumbotron background-image-about">
+    ...
+</div>
+```
+
+Where the class `jumbotron` will have a background image covering the whole `div` like this:
+
+```
+/* app/styles/main.scss */
+.jumbotron {
+    ...
+    background: no-repeat 0 25%;
+    background-size: cover;
+    ...
+}
+```
+
+So how does this result in the correct banner image appearing? Very simple, Sass to the rescue!
+
+We start by defining a [@mixin directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins) in the 
+`globals.scss` file as follows:
+
+```
+/* app/styles/globals.scss */
+@mixin background-image($name) {
+    .background-image-#{$name} {
+        background-image: url(/assets/images/banners/#{$name}.png);
+    }
+}
+```
+
+In the `main.scss` file we import the `globals.scss` file and use the [@each directive](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#each-directive) and iterate over all of the pages.
+
+```
+/* app/styles/main.scss */
+
+@import "globals";
+...
+@each $name in about, contact, index, ... {
+    @include background-image(#{$name});
+}
+```
+
+So far example, the `about`` page will result in the following:
+```
+.background-image-about {
+    background-image: url(/assets/images/banners/about.png);
+}
+```
+
+Exactly what we wanted.
+
+### Preloading images
+
+This section provides more technical detail into how the banner background images are preloaded during application
+initialization.
+
+...
 
 ## References
 
@@ -211,6 +310,7 @@ There are a number of great books out there about JavaScript and frameworks.
 * [Rock and Roll with Ember.js](http://balinterdi.com/rock-and-roll-with-emberjs/) - Balint Erdi
 * [Speaking JavaScript](http://speakingjs.com/es5/) - Axel Rauschmayer
 * [Web Animation using JavaScript](http://www.amazon.com/Web-Animation-using-JavaScript-Develop/dp/0134096665) - Julian Shapiro
+* [Sass and Compass in Action](https://www.manning.com/books/sass-and-compass-in-action) - Wynn Netherland et al
 
 ## Videos
 
