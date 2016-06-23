@@ -120,7 +120,7 @@ export default function() {
                 attributes: {
                     name: 'Elm',
                     url: 'http://elm-lang.org/',
-                    score: 3}
+                    score: 2}
             }, {
                 type: 'skills',
                 id: 11,
