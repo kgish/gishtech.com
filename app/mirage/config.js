@@ -405,6 +405,14 @@ export default function() {
                 type: 'skills',
                 id: 46,
                 attributes: {
+                    name: 'Haskell',
+                    url: 'https://www.haskell.org/',
+                    score: 1
+                }
+            }, {
+                type: 'skills',
+                id: 47,
+                attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
                     score: 4
