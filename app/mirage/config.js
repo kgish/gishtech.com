@@ -413,6 +413,14 @@ export default function() {
                 type: 'skills',
                 id: 47,
                 attributes: {
+                    name: 'Catalyst',
+                    url: 'http://www.catalystframework.org/',
+                    score: 4
+                }
+            }, {
+                type: 'skills',
+                id: 48,
+                attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
                     score: 4
