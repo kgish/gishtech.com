@@ -421,6 +421,22 @@ export default function() {
                 type: 'skills',
                 id: 48,
                 attributes: {
+                    name: 'Gulp',
+                    url: 'http://gulpjs.com/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 49,
+                attributes: {
+                    name: 'Middleman',
+                    url: 'https://middlemanapp.com/',
+                    score: 3
+                }
+            }, {
+                type: 'skills',
+                id: 50,
+                attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
                     score: 4
