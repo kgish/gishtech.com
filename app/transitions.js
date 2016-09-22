@@ -17,6 +17,11 @@ export default function(){
         this.reverse('toRight', { duration })
     );
     this.transition(
+        this.fromRoute('portfolios'),
+        this.use('toLeft', { duration }),
+        this.reverse('toRight', { duration })
+    );
+    this.transition(
         this.fromRoute('skills'),
         this.use('toLeft', { duration }),
         this.reverse('toRight', { duration })

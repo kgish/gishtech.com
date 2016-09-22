@@ -6,13 +6,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-    
+
     this.route('skills');
     this.route('contact');
     this.route('about');
     this.route('terms-and-conditions');
     this.route('credits');
     this.route('logo');
+    this.route('portfolios');
     this.route('repository');
     this.route('links');
 

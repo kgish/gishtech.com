@@ -521,5 +521,13 @@ export default function() {
         };
     });
 
+    this.get('/portfolios', function() {
+        return {
+            data: [
+
+            ]
+        };
+    });
+
     this.passthrough('assets/assetMap.json');
 }

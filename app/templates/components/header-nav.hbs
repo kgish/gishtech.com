@@ -16,6 +16,7 @@
             <ul class="nav navbar-nav navbar-left">
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                {{#active-link tagName='li'}}{{#link-to 'portfolios'}}{{fa-icon 'file-picture-o'}} Portfolio{{/link-to}}{{/active-link}}
                 {{#active-link tagName='li'}}{{#link-to 'skills'}}{{fa-icon 'wrench'}} Skills{{/link-to}}{{/active-link}}
                 {{#active-link tagName='li'}}{{#link-to 'about'}}{{fa-icon 'user'}} About{{/link-to}}{{/active-link}}
                 {{#active-link tagName='li'}}{{#link-to 'contact'}}{{fa-icon 'send'}} Contact{{/link-to}}{{/active-link}}
