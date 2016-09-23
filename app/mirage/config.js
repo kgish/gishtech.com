@@ -523,9 +523,51 @@ export default function() {
 
     this.get('/portfolios', function() {
         return {
-            data: [
-
-            ]
+            data: [{
+                type: 'portfolios',
+                id: 1,
+                attributes: {
+                    title: 'Automated test environment for e-learning platform',
+                    description: 'description',
+                    company: 'company',
+                    url: 'url',
+                    image: '',
+                    skills: ['javascript', 'testdriverio', 'selenium', 'mocha', 'git']
+                }
+            }, {
+                type: 'portfolios',
+                id: 2,
+                attributes: {
+                    title: 'NA Holland Website',
+                    description: 'description',
+                    company: 'company',
+                    url: 'url',
+                    image: '',
+                    skills: ['ruby on rails', 'javascript', 'ember.js', 'mysql', 'html5', 'git']
+                }
+            }, {
+                type: 'portfolios',
+                id: 3,
+                attributes: {
+                    title: 'Collaboration platform for Political Party',
+                    description: 'description',
+                    company: 'company',
+                    url: 'url',
+                    image: '',
+                    skills: ['discourse', 'ruby on rails', 'javascript', 'ember.js', 'postgresql', 'docker', 'html5', 'sass', 'git']
+                }
+            }, {
+                type: 'portfolios',
+                id: 4,
+                attributes: {
+                    title: 'Antony Morgan Golf Website',
+                    description: '...',
+                    company: 'company',
+                    url: 'url',
+                    image: '',
+                    skills: ['middleman', 'javascript', 'ruby', 'padrino', 'heroku', 'html5', 'sass', 'slim', 'git']
+                }
+            }]
         };
     });
 
