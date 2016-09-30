@@ -527,33 +527,33 @@ export default function() {
                 type: 'portfolios',
                 id: 1,
                 attributes: {
-                    title: 'Automated test environment for e-learning platform',
-                    description: 'description',
-                    company: 'company',
-                    url: 'url',
-                    image: '',
-                    skills: ['javascript', 'testdriverio', 'selenium', 'mocha', 'git']
+                    title: 'Automated Test Environment',
+                    description: 'For an advanced e-learning platform I designed from scratch an automated test process in order to verify the modules, videos and exams functioned according to the specifications.',
+                    company: 'Tagpoint Training BV',
+                    url: 'http://www.tagpointtraining.com',
+                    image: 'tagpoint-training.png',
+                    skills: ['javascript', 'testdriverio', 'selenium', 'saucelabs', 'mailtrap', 'mocha', 'git']
                 }
             }, {
                 type: 'portfolios',
                 id: 2,
                 attributes: {
                     title: 'NA Holland Website',
-                    description: 'description',
-                    company: 'company',
-                    url: 'url',
-                    image: '',
-                    skills: ['ruby on rails', 'javascript', 'ember.js', 'mysql', 'html5', 'git']
+                    description: 'Completely rewrote the legacy Dutch website of Narcotics Anonymous making a responsive, mobile friendly, single page application using a modern JavaScript framework called Ember',
+                    company: 'NA-Anonieme Verslaafden Nederland',
+                    url: 'https://www.na-holland.nl',
+                    image: 'na-holland.png',
+                    skills: ['ruby on rails', 'javascript', 'ember', 'mysql', 'html5', 'git']
                 }
             }, {
                 type: 'portfolios',
                 id: 3,
                 attributes: {
-                    title: 'Collaboration platform for Political Party',
-                    description: 'description',
-                    company: 'company',
-                    url: 'url',
-                    image: '',
+                    title: 'Ledenkamer PvdA',
+                    description: 'Enhanced the collaboration website using the open source discussion tool Discourse with annotation and user-defined plugins',
+                    company: 'Partij van de Arbeid',
+                    url: 'http://ledenkamer.pvda.nl',
+                    image: 'ledenkamer-pvda.png',
                     skills: ['discourse', 'ruby on rails', 'javascript', 'ember.js', 'postgresql', 'docker', 'html5', 'sass', 'git']
                 }
             }, {
@@ -561,10 +561,10 @@ export default function() {
                 id: 4,
                 attributes: {
                     title: 'Antony Morgan Golf Website',
-                    description: '...',
-                    company: 'company',
-                    url: 'url',
-                    image: '',
+                    description: 'Designed, crafted and deployed a static website for golf fitting services.',
+                    company: 'Antony Morgan Golf',
+                    url: 'http://www.antonymorgangolf.com',
+                    image: 'antony-morgan.png',
                     skills: ['middleman', 'javascript', 'ruby', 'padrino', 'heroku', 'html5', 'sass', 'slim', 'git']
                 }
             }]

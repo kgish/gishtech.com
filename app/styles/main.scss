@@ -78,6 +78,18 @@
     color: #052C36;
 }
 
+.portfolio-item {
+    margin-bottom: 25px;
+
+    img {
+        border-radius: 20px;
+        border: 2px darkgray solid;
+    }
+
+    .skill {
+        font-size: 14px;
+    }
+}
 @media only screen and (max-width: 768px) {
 
     .header > nav > ul.nav.nav-pills > li > a {

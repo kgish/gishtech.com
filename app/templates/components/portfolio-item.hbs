@@ -1,3 +1,9 @@
-<li style="margin-left:-30px">
-    <h4>{{fa-icon 'check' className='fa-li' class='text-success'}} {{item.title}}</h4>
-</li>
+<h4>{{item.title}}</h4>
+<p>{{item.description}}</p>
+<p><a href="{{item.url}}" target="_blank">{{item.company}}</a></p>
+<p><img src="assets/images/portfolios/{{item.image}}" class="img-responsive"/></p>
+<p>
+    {{#each item.skills as |skill|}}
+        <span class="label label-success skill">{{skill}}</span>
+    {{/each}}
+</p>
