@@ -1,9 +1,9 @@
-<h4>{{item.title}}</h4>
-<p>{{item.description}}</p>
-<p><a href="{{item.url}}" target="_blank">{{item.company}}</a></p>
-<p><img src="assets/images/portfolios/{{item.image}}" class="img-responsive"/></p>
-<p>
+<h4 class="portfolio-title">{{item.title}}</h4>
+<p class="portfolio-description">{{item.description}}</p>
+<p class="portfolio-company"><a href="{{item.url}}" target="_blank">{{item.company}}</a></p>
+<p class="portfolio-skills">
     {{#each item.skills as |skill|}}
-        <span class="label label-success skill">{{skill}}</span>
+        <span class="label label-success portfolio-skill">{{skill}}</span>
     {{/each}}
 </p>
+<p class="portfolio-image"><img src="assets/images/portfolios/{{item.image}}" class="img-responsive"/></p>

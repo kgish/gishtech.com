@@ -69,6 +69,10 @@
     color: $color-tertiary;
 }
 
+.crafted-ember {
+    margin-top: 10px;
+}
+
 .syntax-bash {
     font-family: monospace;
     white-space: pre;
@@ -79,15 +83,19 @@
 }
 
 .portfolio-item {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 
     img {
         border-radius: 20px;
         border: 2px darkgray solid;
     }
 
-    .skill {
-        font-size: 14px;
+    .portfolio-image {
+        margin-top: 15px;
+    }
+
+    .portfolio-skill {
+        font-size: 12px;
     }
 }
 @media only screen and (max-width: 768px) {
