@@ -21,6 +21,7 @@ module.exports = function(defaults) {
 
         // https://github.com/rickharrison/broccoli-asset-rev
         fingerprint: {
+            exclude: ['images/portfolios'],
             generateAssetMap: true
         }
 
