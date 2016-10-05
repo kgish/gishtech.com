@@ -528,7 +528,7 @@ export default function() {
                 id: 1,
                 attributes: {
                     title: 'Automated Test Environment',
-                    description: 'For an advanced e-learning platform I designed from scratch an automated test process in order to verify the modules, videos and exams functioned according to the specifications.',
+                    description: 'For an advanced e-learning platform I designed from scratch an automated test process to verify that the modules, videos, exams and awards functioned according to the specifications.',
                     company: 'Tagpoint Training BV',
                     url: 'http://www.tagpointtraining.com',
                     image: 'tagpoint-training.png',
@@ -539,7 +539,7 @@ export default function() {
                 id: 2,
                 attributes: {
                     title: 'NA Holland Website',
-                    description: 'Completely rewrote the legacy Dutch website of Narcotics Anonymous making a responsive, mobile friendly, single page application using a modern JavaScript framework called Ember',
+                    description: 'Completely rewrote the legacy Dutch website of Narcotics Anonymous converting it into a more modern, responsive, and mobile friendly, user experience for helping people overcome drug addiction.',
                     company: 'NA-Anonieme Verslaafden Nederland',
                     url: 'https://www.na-holland.nl',
                     image: 'na-holland.png',
@@ -550,7 +550,7 @@ export default function() {
                 id: 3,
                 attributes: {
                     title: 'Ledenkamer PvdA',
-                    description: 'Enhanced the collaboration website using the open source discussion tool Discourse with annotation and user-defined plugins',
+                    description: 'Enhanced the online collaboration platform using the open source discussion tool Discourse with annotation and user-defined plugins',
                     company: 'Partij van de Arbeid',
                     url: 'http://ledenkamer.pvda.nl',
                     image: 'ledenkamer-pvda.png',
@@ -561,7 +561,7 @@ export default function() {
                 id: 4,
                 attributes: {
                     title: 'Antony Morgan Golf Website',
-                    description: 'Designed, crafted and deployed a static website for golf fitting services.',
+                    description: 'Designed, crafted and deployed a static website for golf fitting services geared towards golfers looking to improve their skills.',
                     company: 'Antony Morgan Golf',
                     url: 'http://www.antonymorgangolf.com',
                     image: 'antony-morgan.png',
