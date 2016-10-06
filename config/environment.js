@@ -22,6 +22,26 @@ module.exports = function(environment) {
             }
             // Here you can pass flags/options to your application instance
             // when it is created
+        },
+
+        // https://github.com/poteto/ember-metrics
+        metricsAdapters: [{
+            name: 'GoogleAnalytics',
+            environments: ['development', 'production'],
+            config: {
+                id: 'UA-81315046-1'
+            }
+        }],
+
+        //https://github.com/rwjblue/ember-cli-content-security-policy
+        contentSecurityPolicy: {
+            'default-src': ["'none'"],
+            'script-src':  ["'self' www.google-analytics.com"],
+            'font-src':    ["'self'"],
+            'connect-src': ["'self' www.google-analytics.com"],
+            'img-src':     ["'self' www.google-analytics.com"],
+            'style-src':   ["'self' 'unsafe-inline'"],
+            'media-src':   ["'self'"]
         }
     };
 
