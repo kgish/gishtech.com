@@ -567,6 +567,28 @@ export default function() {
                     image: 'antony-morgan.png',
                     skills: ['middleman', 'javascript', 'ruby', 'padrino', 'heroku', 'html5', 'sass', 'slim', 'git']
                 }
+            }, {
+                type: 'portfolios',
+                id: 5,
+                attributes: {
+                    title: 'Annotator Store',
+                    description: 'Optimized backend store for the Annotator Library based on Ruby on Rails',
+                    company: 'Socioneers',
+                    url: 'http://socioneers.com',
+                    image: 'annotatorjs-server.png',
+                    skills: ['ruby on rails', 'javascript', 'postgresql', 'RESTful API', 'docker', 'git']
+                }
+            }, {
+                type: 'portfolios',
+                id: 6,
+                attributes: {
+                    title: 'Project Planning Tool',
+                    description: 'Advanced multi-project planning tool for ship building activities based on the DHTMLX JavaScript library',
+                    company: 'Energo Projects',
+                    url: 'http://www.energoprojects.nl',
+                    image: 'energo-projects.png',
+                    skills: ['php', 'phalcon', 'javascript', 'postgresql', 'gantt-chart', 'html5', 'project-planning', 'css', 'sass', 'git']
+                }
             }]
         };
     });
