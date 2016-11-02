@@ -543,13 +543,13 @@ export default function() {
                     company: 'NA-Anonieme Verslaafden Nederland',
                     url: 'https://www.na-holland.nl',
                     image: 'na-holland.png',
-                    skills: ['ruby on rails', 'javascript', 'ember', 'mysql', 'html5', 'git']
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'ember', 'qunit', 'mysql', 'html5', 'git']
                 }
             }, {
                 type: 'portfolios',
                 id: 3,
                 attributes: {
-                    title: 'Ledenkamer PvdA',
+                    title: 'Innovative Democracy Platform',
                     description: 'Enhanced the online collaboration platform using the open source discussion tool Discourse with annotation and user-defined plugins',
                     company: 'Partij van de Arbeid',
                     url: 'http://ledenkamer.pvda.nl',
@@ -560,7 +560,7 @@ export default function() {
                 type: 'portfolios',
                 id: 4,
                 attributes: {
-                    title: 'Antony Morgan Golf Website',
+                    title: 'Golf Fitter Website',
                     description: 'Designed, crafted and deployed a static website for golf fitting services geared towards golfers looking to improve their skills',
                     company: 'Antony Morgan Golf',
                     url: 'http://www.antonymorgangolf.com',
@@ -576,18 +576,29 @@ export default function() {
                     company: 'Socioneers',
                     url: 'http://socioneers.com',
                     image: 'annotatorjs-server.png',
-                    skills: ['ruby on rails', 'javascript', 'postgresql', 'RESTful API', 'docker', 'git']
+                    skills: ['ruby on rails', 'javascript', 'postgresql', 'RESTful API', 'heroku', 'git']
                 }
             }, {
                 type: 'portfolios',
                 id: 6,
+                attributes: {
+                    title: 'Skillzz Search',
+                    description: 'Advanced website platform for matching skilled workers to customers searching for the right person',
+                    company: 'Gishtech',
+                    url: 'https://github.com/kgish/skillzz-search',
+                    image: 'skillzz-search.png',
+                    skills: ['ruby on rails', 'javascript', 'jquery', 'mysql', 'rspec', 'heroku', 'git']
+                }
+            }, {
+                type: 'portfolios',
+                id: 7,
                 attributes: {
                     title: 'Project Planning Tool',
                     description: 'Advanced multi-project planning tool for ship building activities based on the DHTMLX JavaScript library',
                     company: 'Energo Projects',
                     url: 'http://www.energoprojects.nl',
                     image: 'energo-projects.png',
-                    skills: ['php', 'phalcon', 'javascript', 'postgresql', 'gantt-chart', 'html5', 'project-planning', 'css', 'sass', 'git']
+                    skills: ['php', 'phalcon', 'javascript', 'jquery', 'postgresql', 'gantt-chart', 'html5', 'sass', 'git']
                 }
             }]
         };
