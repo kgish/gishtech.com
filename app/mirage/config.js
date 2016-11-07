@@ -527,7 +527,7 @@ export default function() {
                 type: 'portfolios',
                 id: 1,
                 attributes: {
-                    title: 'Automated Test Environment',
+                    title: 'Automated Test Environment for E-Learning Platform',
                     description: 'For an advanced e-learning platform I designed from scratch an automated test process to verify that the modules, videos, exams and awards functioned according to the specifications',
                     company: 'Tagpoint Training BV',
                     url: 'http://www.tagpointtraining.com',
@@ -539,7 +539,7 @@ export default function() {
                 id: 2,
                 attributes: {
                     title: 'NA Holland Website',
-                    description: 'Completely rewrote the legacy Dutch website of Narcotics Anonymous converting it into a more modern, responsive, and mobile friendly, user experience for helping people overcome drug addiction',
+                    description: 'Completely rewrote the legacy Dutch website of Narcotics Anonymous converting it into a more modern, bi-lingual (Dutch and English), responsive, and mobile friendly, user experience for helping people overcome drug addiction',
                     company: 'NA-Anonieme Verslaafden Nederland',
                     url: 'https://www.na-holland.nl',
                     image: 'na-holland.png',
@@ -549,7 +549,7 @@ export default function() {
                 type: 'portfolios',
                 id: 3,
                 attributes: {
-                    title: 'Innovative Democracy Platform',
+                    title: 'Innovative Democracy Platform for Motions',
                     description: 'Enhanced the online collaboration platform using the open source discussion tool Discourse with annotation and user-defined plugins',
                     company: 'Partij van de Arbeid',
                     url: 'http://ledenkamer.pvda.nl',
@@ -560,8 +560,8 @@ export default function() {
                 type: 'portfolios',
                 id: 4,
                 attributes: {
-                    title: 'Golf Fitter Website',
-                    description: 'Designed, crafted and deployed a static website for golf fitting services geared towards golfers looking to improve their skills',
+                    title: 'Golf Club-Fitter Website',
+                    description: 'Designed, crafted and deployed a static website for golf-fitting services geared towards golfers looking to improve their golfing skills',
                     company: 'Antony Morgan Golf',
                     url: 'http://www.antonymorgangolf.com',
                     image: 'antony-morgan.png',
@@ -571,7 +571,7 @@ export default function() {
                 type: 'portfolios',
                 id: 5,
                 attributes: {
-                    title: 'Annotator Store',
+                    title: 'Annotator Store Server',
                     description: 'Optimized backend store for the Annotator Library based on Ruby on Rails',
                     company: 'Socioneers',
                     url: 'http://socioneers.com',
@@ -582,8 +582,8 @@ export default function() {
                 type: 'portfolios',
                 id: 6,
                 attributes: {
-                    title: 'Skillzz Search',
-                    description: 'Advanced website platform for matching skilled workers to customers searching for the right person',
+                    title: 'Skillzz Search Platform',
+                    description: 'Advanced website search platform for matching skilled workers to customers searching for the right person',
                     company: 'Gishtech',
                     url: 'https://github.com/kgish/skillzz-search',
                     image: 'skillzz-search.png',
@@ -593,7 +593,7 @@ export default function() {
                 type: 'portfolios',
                 id: 7,
                 attributes: {
-                    title: 'Project Planning Tool',
+                    title: 'Project Planning Tool for Ship Building',
                     description: 'Advanced multi-project planning tool for ship building activities based on the DHTMLX JavaScript library',
                     company: 'Energo Projects',
                     url: 'http://www.energoprojects.nl',
