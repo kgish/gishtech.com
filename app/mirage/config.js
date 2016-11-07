@@ -34,6 +34,13 @@ export default function() {
                 type: 'intros',
                 id: 5,
                 attributes: {
+                    title: 'Continuous delivery',
+                    description: 'I produce software in short cycles, ensuring it can be reliably released at any time, which is essential when the going gets tough and meeting tight deadlines is essential for success.'
+                }
+            }, {
+                type: 'intros',
+                id: 6,
+                attributes: {
                     title: 'Motto',
                     description: 'My favorite motto to live by is: "You\'re never too old to learn new stuff"'
                 }
