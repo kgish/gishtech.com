@@ -605,7 +605,7 @@ export default function() {
                     company: 'Energo Projects',
                     url: 'http://www.energoprojects.nl',
                     image: 'energo-projects.png',
-                    skills: ['php', 'phalcon', 'javascript', 'jquery', 'postgresql', 'gantt-chart', 'html5', 'sass', 'git']
+                    skills: ['php', 'phalcon', 'javascript', 'jquery', 'd3', 'postgresql', 'gantt-chart', 'html5', 'sass', 'git' ]
                 }
             }]
         };
