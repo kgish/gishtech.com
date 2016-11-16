@@ -550,18 +550,18 @@ export default function() {
                     company: 'NA-Anonieme Verslaafden Nederland',
                     url: 'https://www.na-holland.nl',
                     image: 'na-holland.png',
-                    skills: ['ruby on rails', 'rspec', 'javascript', 'ember', 'qunit', 'mysql', 'html5', 'git']
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'ember', 'qunit', 'mysql', 'html5', 'sass', 'git']
                 }
             }, {
                 type: 'portfolios',
                 id: 3,
                 attributes: {
-                    title: 'Innovative Democracy Platform for Motions',
-                    description: 'Enhanced the online collaboration platform using the open source discussion tool Discourse with annotation and user-defined plugins',
+                    title: 'Innovative Democracy Platform',
+                    description: 'Enhanced the online collaboration platform using Discourse with amendment annotation and user-defined plugins',
                     company: 'Partij van de Arbeid',
                     url: 'http://ledenkamer.pvda.nl',
                     image: 'ledenkamer-pvda.png',
-                    skills: ['discourse', 'ruby on rails', 'javascript', 'ember.js', 'postgresql', 'docker', 'html5', 'sass', 'git']
+                    skills: ['discourse', 'ruby on rails', 'javascript', 'ember', 'postgresql', 'docker', 'html5', 'sass', 'git']
                 }
             }, {
                 type: 'portfolios',
@@ -589,7 +589,7 @@ export default function() {
                 type: 'portfolios',
                 id: 6,
                 attributes: {
-                    title: 'Skillzz Search Platform',
+                    title: 'Skillzz Search Platform for Recruiters',
                     description: 'Advanced website search platform for matching skilled workers to customers searching for the right person',
                     company: 'Gishtech',
                     url: 'https://github.com/kgish/skillzz-search',
@@ -601,11 +601,11 @@ export default function() {
                 id: 7,
                 attributes: {
                     title: 'Project Planning Tool for Ship Building',
-                    description: 'Advanced multi-project planning tool for ship building activities based on the DHTMLX JavaScript library',
+                    description: 'Advanced multi-project planning tool for ship building activities based on the D3 and DHTMLX JavaScript libraries',
                     company: 'Energo Projects',
                     url: 'http://www.energoprojects.nl',
                     image: 'energo-projects.png',
-                    skills: ['php', 'phalcon', 'javascript', 'jquery', 'd3', 'postgresql', 'gantt-chart', 'html5', 'sass', 'git' ]
+                    skills: ['php', 'phalcon', 'javascript', 'jquery', 'd3', 'postgresql', 'dhtmlxGantt', 'html5', 'css3', 'git' ]
                 }
             }]
         };
