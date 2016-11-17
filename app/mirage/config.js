@@ -444,6 +444,14 @@ export default function() {
                 type: 'skills',
                 id: 50,
                 attributes: {
+                    name: 'D3',
+                    url: 'https://d3js.org/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 51,
+                attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
                     score: 4
