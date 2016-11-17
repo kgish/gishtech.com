@@ -1,10 +1,15 @@
 @import "globals";
 
 .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: whitesmoke;
+    .navbar {
+        margin-bottom: 10px;
+    }
 }
 .jumbotron {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     color: white;
     border: $color-tertiary solid 5px;
     background: no-repeat 0 25%;
