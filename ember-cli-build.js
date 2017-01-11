@@ -36,6 +36,9 @@ module.exports = function(defaults) {
     app.import('bower_components/velocity/velocity.min.js');
     app.import('bower_components/velocity/velocity.ui.min.js');
 
+    // Moment: https://github.com/moment/moment (bower install moment --save-dev)
+    app.import('bower_components/moment/min/moment.min.js');
+
     return app.toTree();
 };
 
