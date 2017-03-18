@@ -9,8 +9,7 @@ export default Ember.Component.extend(shuffleItemsMixin, {
         { value: 0, title: 'All'},
         { value: 1, title: 'Okay'},
         { value: 2, title: 'Pretty good'},
-        { value: 3, title: 'Excellent'},
-        { value: 4, title: 'Amazing'}
+        { value: 3, title: 'Excellent'}
     ],
 
     didInsertElement() {
