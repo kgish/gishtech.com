@@ -7,7 +7,7 @@ other fun stuff.
 
 For those of you interested, the real McCoy can be viewed online at [gishtech.com](http://www.gishtech.com).
 
-![](public/assets/images/screenshot-banner-index.png?raw=true | width=400)
+![](public/assets/images/screenshot-banner-index.png)
 
 
 ## Introduction
