@@ -529,6 +529,28 @@ export default function() {
                     image: 'energo-projects.png',
                     skills: ['php', 'phalcon', 'javascript', 'jquery', 'd3', 'postgresql', 'dhtmlxGantt', 'html5', 'css3', 'git' ]
                 }
+            }, {
+                type: 'portfolios',
+                id: 8,
+                attributes: {
+                    title: 'Ember Rails Tutorial',
+                    description: 'Ready to use application template including a tutorial on how to use it',
+                    company: 'Ember Amsterdam Meetup',
+                    url: 'http://www.gishtech.com/assets/documents/Ember-Meetup-13-Amsterdam.pdf',
+                    image: 'ember-rails-app.png',
+                    skills: ['ember', 'ruby on rails', 'javascript', 'postgresql', 'html5', 'sass', 'heroku']
+                }
+            }, {
+                type: 'portfolios',
+                id: 9,
+                attributes: {
+                    title: 'Toolbox Portal',
+                    description: 'Web portal for integrated collection of user-define tool components',
+                    company: 'Socioneers',
+                    url: 'http://www.socioneers.com',
+                    image: 'toolbox-app.png',
+                    skills: ['ruby on rails', 'javascript', 'minitest', 'postgresql', 'html5', 'sass', 'annotatorjs', 'dhtmlxgantt', 'heroku']
+                }
             }]
         };
     });
