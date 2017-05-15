@@ -472,7 +472,7 @@ export default function() {
                     company: 'NA-Anonieme Verslaafden Nederland',
                     url: 'https://www.na-holland.nl',
                     image: 'na-holland.png',
-                    skills: ['ruby on rails', 'rspec', 'javascript', 'ember', 'qunit', 'mysql', 'html5', 'sass', 'git']
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'emberjs', 'qunit', 'mysql', 'html5', 'sass', 'git']
                 }
             }, {
                 type: 'portfolios',
@@ -483,7 +483,7 @@ export default function() {
                     company: 'Partij van de Arbeid',
                     url: 'http://ledenkamer.pvda.nl',
                     image: 'ledenkamer-pvda.png',
-                    skills: ['discourse', 'ruby on rails', 'javascript', 'ember', 'postgresql', 'docker', 'html5', 'sass', 'git']
+                    skills: ['discourse', 'ruby on rails', 'javascript', 'emberjs', 'postgresql', 'docker', 'html5', 'sass', 'git']
                 }
             }, {
                 type: 'portfolios',
@@ -538,7 +538,7 @@ export default function() {
                     company: 'Ember Amsterdam Meetup',
                     url: 'http://www.gishtech.com/assets/documents/Ember-Meetup-13-Amsterdam.pdf',
                     image: 'ember-rails-app.png',
-                    skills: ['ember', 'ruby on rails', 'javascript', 'postgresql', 'html5', 'sass', 'heroku']
+                    skills: ['emberjs', 'ruby on rails', 'javascript', 'postgresql', 'html5', 'bootstrap', 'sass', 'heroku']
                 }
             }, {
                 type: 'portfolios',
@@ -549,7 +549,18 @@ export default function() {
                     company: 'Socioneers',
                     url: 'http://www.socioneers.com',
                     image: 'toolbox-app.png',
-                    skills: ['ruby on rails', 'javascript', 'minitest', 'postgresql', 'html5', 'sass', 'annotatorjs', 'dhtmlxgantt', 'heroku']
+                    skills: ['ruby on rails', 'javascript', 'bootstrap', 'postgresql', 'html5', 'sass', 'annotatorjs', 'dhtmlxgantt', 'heroku']
+                }
+            }, {
+                type: 'portfolios',
+                id: 10,
+                attributes: {
+                    title: 'Football Live Scoring',
+                    description: 'Mobile web app for following football scores, teams and players',
+                    company: 'Gishtech',
+                    url: 'http://gishtech.com',
+                    image: 'football-scores.png',
+                    skills: ['ruby on rails', 'emberjs', 'bootstrap', 'postgresql', 'football-api', 'sass', 'heroku']
                 }
             }]
         };
