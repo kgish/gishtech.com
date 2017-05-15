@@ -23,9 +23,10 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        {{#active-link tagName='li'}}{{#link-to 'publications'}}Publications{{/link-to}}{{/active-link}}
+                        {{#active-link tagName='li'}}{{#link-to 'repository'}}Repository{{/link-to}}{{/active-link}}
                         {{#active-link tagName='li'}}{{#link-to 'links'}}Links{{/link-to}}{{/active-link}}
                         {{#active-link tagName='li'}}{{#link-to 'credits'}}Credits{{/link-to}}{{/active-link}}
-                        {{#active-link tagName='li'}}{{#link-to 'repository'}}Repository{{/link-to}}{{/active-link}}
                         {{#active-link tagName='li'}}{{#link-to 'logo'}}Logo{{/link-to}}{{/active-link}}
                         <li role="separator" class="divider"></li>
                         {{#active-link tagName='li'}}{{#link-to 'terms-and-conditions'}}Terms and conditions{{/link-to}}{{/active-link}}

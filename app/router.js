@@ -22,15 +22,16 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
 
-    this.route('skills');
-    this.route('contact');
     this.route('about');
-    this.route('terms-and-conditions');
+    this.route('contact');
     this.route('credits');
+    this.route('links');
     this.route('logo');
     this.route('portfolios');
+    this.route('publications');
     this.route('repository');
-    this.route('links');
+    this.route('skills');
+    this.route('terms-and-conditions');
 
     // Catch-all for unknown routes
     this.route("page-not-found", { path: '/*path'});
