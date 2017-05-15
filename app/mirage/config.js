@@ -472,7 +472,7 @@ export default function() {
                     company: 'NA-Anonieme Verslaafden Nederland',
                     url: 'https://www.na-holland.nl',
                     image: 'na-holland.png',
-                    skills: ['ruby on rails', 'rspec', 'javascript', 'emberjs', 'qunit', 'mysql', 'html5', 'sass', 'git']
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'emberjs', 'qunit', 'mysql', 'html5', 'sass', 'mobile']
                 }
             }, {
                 type: 'portfolios',
@@ -494,7 +494,7 @@ export default function() {
                     company: 'Antony Morgan Golf',
                     url: 'http://www.antonymorgangolf.com',
                     image: 'antony-morgan.png',
-                    skills: ['middleman', 'javascript', 'ruby', 'padrino', 'heroku', 'html5', 'sass', 'slim', 'git']
+                    skills: ['middleman', 'javascript', 'ruby', 'padrino', 'heroku', 'html5', 'sass', 'slim', 'mobile']
                 }
             }, {
                 type: 'portfolios',
@@ -505,14 +505,14 @@ export default function() {
                     company: 'Socioneers',
                     url: 'http://socioneers.com',
                     image: 'annotatorjs-server.png',
-                    skills: ['ruby on rails', 'javascript', 'postgresql', 'RESTful API', 'heroku', 'git']
+                    skills: ['ruby on rails', 'javascript', 'postgresql', 'restful api', 'heroku', 'git']
                 }
             }, {
                 type: 'portfolios',
                 id: 6,
                 attributes: {
-                    title: 'Skillzz Search Platform for Recruiters',
-                    description: 'Advanced website search platform for matching skilled workers to customers searching for the right person',
+                    title: 'Skillzz Search Platform',
+                    description: 'Advanced website search platform for matching skilled workers to customers searching for employees',
                     company: 'Gishtech',
                     url: 'https://github.com/kgish/skillzz-search',
                     image: 'skillzz-search.png',
@@ -527,7 +527,7 @@ export default function() {
                     company: 'Energo Projects',
                     url: 'http://www.energoprojects.nl',
                     image: 'energo-projects.png',
-                    skills: ['php', 'phalcon', 'javascript', 'jquery', 'd3', 'postgresql', 'dhtmlxGantt', 'html5', 'css3', 'git' ]
+                    skills: ['php', 'phalcon', 'javascript', 'jquery', 'd3', 'postgresql', 'dhtmlxgantt', 'html5', 'css3', 'git' ]
                 }
             }, {
                 type: 'portfolios',
@@ -549,7 +549,7 @@ export default function() {
                     company: 'Socioneers',
                     url: 'http://www.socioneers.com',
                     image: 'toolbox-app.png',
-                    skills: ['ruby on rails', 'javascript', 'bootstrap', 'postgresql', 'html5', 'sass', 'annotatorjs', 'dhtmlxgantt', 'heroku']
+                    skills: ['ruby on rails', 'javascript', 'bootstrap', 'postgresql', 'html5', 'sass', 'annotatorjs', 'dhtmlxgantt', 'mobile', 'heroku']
                 }
             }, {
                 type: 'portfolios',
@@ -560,7 +560,7 @@ export default function() {
                     company: 'Gishtech',
                     url: 'http://gishtech.com',
                     image: 'football-scores.png',
-                    skills: ['ruby on rails', 'emberjs', 'bootstrap', 'postgresql', 'football-api', 'sass', 'heroku']
+                    skills: ['ruby on rails', 'emberjs', 'bootstrap', 'postgresql', 'football-api', 'sass', 'heroku', 'mobile']
                 }
             }]
         };
