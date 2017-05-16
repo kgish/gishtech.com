@@ -25,16 +25,29 @@ export default Ember.Controller.extend({
 
     actions: {
         reset() {
-            this.set('name', '');
-            this.set('email', '');
-            this.set('message', '');
+            this._reset();
         },
         submit() {
-            let name = this.set('name', ''),
-                email = this.set('email', ''),
-                message = this.set('message', '');
+            let name = this.get('name'),
+                email = this.get('email'),
+                message = this.get('message');
 
-            alert('Your message has been sent, thanks!')
+            bootbox.alert({
+                size: "small",
+                title: `Thanks ${name}!`,
+                message: "<p>Your message has been sent, and I will contact you soon.<p><p>Kind regards,<br/>Kiffin</p>",
+                callback: function(){}
+            });
+
+            this._reset();
         }
+    },
+
+    // Private
+
+    _reset() {
+        this.set('name', '');
+        this.set('email', '');
+        this.set('message', '');
     }
 });

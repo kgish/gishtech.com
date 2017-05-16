@@ -1,9 +1,9 @@
 /*jshint node:true*/
 /* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+let EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
-    var app = new EmberApp(defaults, {
+    let app = new EmberApp(defaults, {
 
         // Bootstrap with Sass
         sassOptions: {
@@ -38,6 +38,9 @@ module.exports = function(defaults) {
 
     // Moment: https://github.com/moment/moment (bower install moment --save-dev)
     app.import('bower_components/moment/min/moment.min.js');
+
+    // Bootbox: https://github.com/makeusabrew/bootbox
+    app.import('vendor/javascript/bootbox.min.js');
 
     return app.toTree();
 };
