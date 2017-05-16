@@ -9,7 +9,7 @@
     }
 }
 .jumbotron {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: white;
     border: $color-tertiary solid 5px;
     background: no-repeat 0 25%;
@@ -79,7 +79,7 @@
 }
 
 .crafted-ember {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .syntax-bash {
@@ -107,6 +107,15 @@
         font-size: 12px;
     }
 }
+
+.marketing {
+    margin-top: 0;
+}
+
+.jumbo {
+    bottom-margin: 5px;
+}
+
 @media only screen and (max-width: 768px) {
 
     .header > nav > ul.nav.nav-pills > li > a {
