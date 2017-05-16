@@ -41,11 +41,9 @@ export default Ember.Controller.extend({
                     bootbox.alert({
                         size: "small",
                         title: `Thanks ${name}!`,
-                        message: "<p>Your message has been sent, and I will contact you soon.<p><p>Kind regards,<br/>Kiffin</p>",
-                        callback: function(){}
+                        message: "<p>Your message has been sent, and I will contact you shortly.<p><p>Kind regards,<br/>Kiffin<br/>Gishtech</p>",
+                        callback: function(){ this._reset(); }
                     });
-
-                    this._reset();
                 },
                 error: function(jqxhr, textStatus) {
                     bootbox.alert({
