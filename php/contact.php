@@ -10,7 +10,6 @@ function is_email_valid($email) {
 	return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
-
 if( isset($name) && isset($email) && isset($message) && isset($subject) && is_email_valid($email) ) {
 
 	// Avoid Email Injection and Mail Form Script Hijacking
@@ -41,6 +40,5 @@ EOD;
 	// PHP email sender
 	mail($to, $subject, $body, $headers);
 }
-
 
 ?>
