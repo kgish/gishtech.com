@@ -567,4 +567,5 @@ export default function() {
     });
 
     this.passthrough('assets/assetMap.json');
+    this.passthrough('/php/contact.php');
 }

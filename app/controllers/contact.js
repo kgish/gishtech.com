@@ -30,16 +30,32 @@ export default Ember.Controller.extend({
         submit() {
             let name = this.get('name'),
                 email = this.get('email'),
-                message = this.get('message');
+                message = this.get('message'),
+                json = { name: name, email: email, subject: 'Contact message', message: message };
 
-            bootbox.alert({
-                size: "small",
-                title: `Thanks ${name}!`,
-                message: "<p>Your message has been sent, and I will contact you soon.<p><p>Kind regards,<br/>Kiffin</p>",
-                callback: function(){}
+            $.ajax({
+                url: '/php/contact.php',
+                type: 'POST',
+                data: json,
+                success: function(data) {
+                    bootbox.alert({
+                        size: "small",
+                        title: `Thanks ${name}!`,
+                        message: "<p>Your message has been sent, and I will contact you soon.<p><p>Kind regards,<br/>Kiffin</p>",
+                        callback: function(){}
+                    });
+
+                    this._reset();
+                },
+                error: function(jqxhr, textStatus) {
+                    bootbox.alert({
+                        size: "small",
+                        title: `ERROR ${jqxhr.status} ${textStatus}`,
+                        message: "<p>Something went wrong. Please try again at a later time.</p>",
+                        callback: function(){}
+                    });
+                }
             });
-
-            this._reset();
         }
     },
 
