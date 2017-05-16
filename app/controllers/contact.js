@@ -28,7 +28,8 @@ export default Ember.Controller.extend({
             this._reset();
         },
         submit() {
-            let name = this.get('name'),
+            let _this = this,
+                name = this.get('name'),
                 email = this.get('email'),
                 message = this.get('message'),
                 json = { name: name, email: email, subject: 'Contact message', message: message };
@@ -42,7 +43,7 @@ export default Ember.Controller.extend({
                         size: "small",
                         title: `Thanks ${name}!`,
                         message: "<p>Your message has been sent, and I will contact you shortly.<p><p>Kind regards,<br/>Kiffin<br/>Gishtech</p>",
-                        callback: function(){ this._reset(); }
+                        callback: function(){ _this._reset(); }
                     });
                 },
                 error: function(jqxhr, textStatus) {
