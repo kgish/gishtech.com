@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
                 url: '/php/contact.php',
                 type: 'POST',
                 data: json,
-                success: function(data) {
+                success: function() {
                     bootbox.alert({
                         size: "small",
                         title: `Thanks ${name}!`,

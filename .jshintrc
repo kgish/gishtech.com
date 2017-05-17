@@ -3,7 +3,10 @@
     "server",
     "document",
     "window",
-    "-Promise"
+    "-Promise",
+    "$",
+    "bootbox",
+    "moment"
   ],
   "browser": true,
   "boss": true,
