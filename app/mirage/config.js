@@ -562,6 +562,17 @@ export default function() {
                     image: 'football-scores.png',
                     skills: ['ruby on rails', 'emberjs', 'bootstrap', 'postgresql', 'football-api', 'sass', 'heroku', 'mobile']
                 }
+            }, {
+                type: 'portfolios',
+                id: 11,
+                attributes: {
+                    title: 'GitHub API',
+                    description: 'Emberjs application using GitHub API to access user repositories',
+                    company: 'github',
+                    url: 'https://github.com/kgish/github-api',
+                    image: 'github-api.png',
+                    skills: ['emberjs', 'bootstrap', 'github-api', 'ember-data-github', 'font-awesome', 'sass']
+                }
             }]
         };
     });
