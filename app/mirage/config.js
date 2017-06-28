@@ -568,10 +568,21 @@ export default function() {
                 attributes: {
                     title: 'GitHub API',
                     description: 'Emberjs application using GitHub API to access user repositories',
-                    company: 'github',
+                    company: 'Gishtech',
                     url: 'https://github.com/kgish/github-api',
                     image: 'github-api.png',
                     skills: ['emberjs', 'bootstrap', 'github-api', 'ember-data-github', 'font-awesome', 'sass']
+                }
+            }, {
+                type: 'portfolios',
+                id: 12,
+                attributes: {
+                    title: 'Mijn-begroting',
+                    description: 'Interactive tool for exploring city, county and provincial budget spending',
+                    company: 'Socioneers',
+                    url: 'https://github.com/kgish/mijn-begroting',
+                    image: 'mijn-begroting.png',
+                    skills: ['emberjs', 'bootstrap', 'd3', 'odata', 'google-maps', 'font-awesome', 'sass']
                 }
             }]
         };

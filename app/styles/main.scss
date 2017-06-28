@@ -1,3 +1,8 @@
+html,
+body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
 .container {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -47,7 +52,7 @@
 }
 
 .skills p, .credits p {
-    font-size: 16px;
+    //font-size: 16px;
 }
 
 .skills-list .liquid-container {
@@ -70,7 +75,7 @@
 }
 
 .score {
-    font-size: 8px;
+    //font-size: 8px;
 }
 
 .heart {
@@ -103,7 +108,9 @@
     }
 
     .portfolio-skill {
-        font-size: 12px;
+        margin-top: 5px;
+        //font-size: 12px;
+        display: inline-block;
     }
 }
 

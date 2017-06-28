@@ -1,12 +1,37 @@
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .row.marketing {
+        padding: 0;
+    }
+
+    .col-lg-12 {
+        padding: 10px;
+    }
 
     .header > nav > ul.nav.nav-pills > li > a {
-        font-size: 12px;
+        //font-size: 12px;
+    }
+
+    .row-marketing {
+        margin: 2px;
     }
 
     .hide-mobile {
         display: none;
     }
-
 }
 
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 50%;
+    }
+}
