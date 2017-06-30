@@ -35,7 +35,7 @@ export default function() {
                 id: 5,
                 attributes: {
                     title: 'Continuous delivery',
-                    description: 'I produce software in short cycles, ensuring it can be reliably released at any time, which is essential when the going gets tough and meeting tight deadlines is essential for success.'
+                    description: 'I produce software in short cycles, ensuring it can be reliably released at any time, which is essential when the going gets tough and meeting tight deadlines is essential for success'
                 }
             }, {
                 type: 'intros',
@@ -408,7 +408,7 @@ export default function() {
                 type: 'credits',
                 id: 5,
                 attributes: {
-                    name: 'Fontawesome',
+                    name: 'Font Awesome',
                     url: 'fontawesome.io'
                 }
             }, {
