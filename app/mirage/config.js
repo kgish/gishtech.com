@@ -584,6 +584,28 @@ export default function() {
                     image: 'mijn-begroting.png',
                     skills: ['emberjs', 'bootstrap', 'd3', 'odata', 'google-maps', 'font-awesome', 'sass']
                 }
+            }, {
+                type: 'portfolios',
+                id: 13,
+                attributes: {
+                    title: 'Europeana Collections Portal',
+                    description: 'Website providing access to over 50 million digitised items – books, music, artworks and more – with sophisticated search and filter tools',
+                    company: 'Europeana.eu',
+                    url: 'http://europeana.eu',
+                    image: 'europeana.eu.png',
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'postgresql', 'assembla', 'github']
+                }
+            }, {
+                type: 'portfolios',
+                id: 14,
+                attributes: {
+                    title: 'Assembla to Jira Migration Tool',
+                    description: 'Conversion utility to transfer complete Assembla spaces (tickets, comments, attachments, users) to Jira',
+                    company: 'Gishtech',
+                    url: 'http://gishtech.com',
+                    image: 'assembla-to-jira.png',
+                    skills: ['ruby', 'rspec', 'csv', 'assembla', 'jira']
+                }
             }]
         };
     });
