@@ -601,7 +601,7 @@ export default function() {
                 attributes: {
                     title: 'Assembla to Jira Migration Tool',
                     description: 'Conversion utility to transfer complete Assembla spaces (tickets, comments, attachments, users) to Jira',
-                    company: 'Gishtech',
+                    company: 'Assembla-to-Jira',
                     url: 'https://github.com/kgish/assembla-to-jira',
                     image: 'assembla-to-jira.png',
                     skills: ['ruby', 'rspec', 'csv', 'assembla', 'jira']
