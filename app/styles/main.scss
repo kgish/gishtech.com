@@ -121,3 +121,13 @@ body {
 .has-success .form-control-success {
     border: 2px solid green;
 }
+
+.textalign-center {
+    text-align: center;
+}
+
+.spotlight {
+    color: $color-tertiary;
+    margin-left: 10px;
+    margin-right: 10px;
+}
