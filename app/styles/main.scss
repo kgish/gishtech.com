@@ -126,8 +126,17 @@ body {
     text-align: center;
 }
 
-.spotlight {
-    color: $color-tertiary;
-    margin-left: 10px;
-    margin-right: 10px;
+div.spotlight {
+    padding-top:10px;
+    text-align: center;
+    img {
+        display:inline;
+        max-width:500px;
+        border: 1px solid lightgray;
+    }
+    i.fa {
+        color: $color-tertiary;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
