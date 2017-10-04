@@ -27,11 +27,16 @@
     .hide-mobile {
         display: none;
     }
+
+    .container {
+        max-width: 80%;
+    }
 }
 
 @media (min-width: 768px) {
 
-    .container {
-        max-width: 50%;
-    }
+}
+
+.img-responsive {
+    width:100%;
 }
