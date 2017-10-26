@@ -2,7 +2,8 @@ import Ember from 'ember';
 import shuffleItemsMixin from '../mixins/shuffle-items';
 
 export default Ember.Component.extend(shuffleItemsMixin, {
-    classNames: ['intro-listing'],
+    tagName: 'ul',
+    classNames: ['intro-listing', 'fa-ul'],
 
     intros: Ember.computed.alias('model'),
 

@@ -144,3 +144,12 @@ div.spotlight {
 .footer {
     font-size: smaller;
 }
+
+ul.intro-listing {
+    margin-left: 0;
+    li.intro-item {
+        p {
+            margin-left: 25px;
+        }
+    }
+}
