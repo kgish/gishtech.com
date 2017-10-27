@@ -7,14 +7,14 @@ export default function() {
                 id: 1,
                 attributes: {
                     title: 'From start to finish non-stop',
-                    description: 'I am quite familiar with the complete software development pipeline: design, user stories, bdd, programming, unit-testing, code review, uat, deployment, after-care, maintenance and trouble-shooting'
+                    description: 'I am very familiar with the complete software development pipeline: design, user stories, programming, unit-testing, code review, deployment, maintenance and trouble-shooting'
                 }
             }, {
                 type: 'intros',
                 id: 2,
                 attributes: {
                     title: 'Team management is fun',
-                    description: 'I take coaching and motivating teams very seriously, fostering the fun-factor and team spirit, encouraging others to build stuff that they can be proud to show'
+                    description: 'I take coaching and motivating teams seriously, fostering the fun-factor and team spirit, encouraging others to build stuff that they can be proud of'
                 }
             }, {
                 type: 'intros',
@@ -28,7 +28,7 @@ export default function() {
                 id: 4,
                 attributes: {
                     title: 'Lots and lots of testing',
-                    description: 'I am a real stickler when it comes to testing, and where possible I introduce automated testing as early as possible in order to avoid introducing unnecessary design defects and bugs'
+                    description: 'I am a real stickler when it comes to testing, introducing automated testing as early as possible in order to avoid unnecessary design defects and bugs'
                 }
             }, {
                 type: 'intros',
@@ -42,7 +42,7 @@ export default function() {
                 id: 6,
                 attributes: {
                     title: 'Motto',
-                    description: 'My favorite motto to live by is: "You\'re never too old to learn new stuff"'
+                    description: 'My favorite motto is "You\'re never too old to learn new stuff"'
                 }
             }]
         };
@@ -366,6 +366,14 @@ export default function() {
                 type: 'skills',
                 id: 40,
                 attributes: {
+                    name: 'Angular',
+                    url: 'https://angular.io/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 41,
+                attributes: {
                     name: 'Bash',
                     url: 'https://www.gnu.org/software/bash/',
                     score: 3
@@ -593,7 +601,7 @@ export default function() {
                     company: 'Europeana.eu',
                     url: 'http://europeana.eu',
                     image: 'europeana.eu.png',
-                    skills: ['ruby on rails', 'rspec', 'javascript', 'postgresql', 'assembla', 'github']
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'postgresql', 'assembla', 'github', 'angular']
                 }
             }, {
                 type: 'portfolios',
