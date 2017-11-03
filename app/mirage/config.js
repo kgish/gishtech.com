@@ -374,6 +374,14 @@ export default function() {
                 type: 'skills',
                 id: 41,
                 attributes: {
+                    name: 'Typescript',
+                    url: 'https://www.typescriptlang.org/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 42,
+                attributes: {
                     name: 'Bash',
                     url: 'https://www.gnu.org/software/bash/',
                     score: 3
@@ -601,7 +609,7 @@ export default function() {
                     company: 'Europeana.eu',
                     url: 'http://europeana.eu',
                     image: 'europeana.eu.png',
-                    skills: ['ruby on rails', 'rspec', 'javascript', 'postgresql', 'assembla', 'github', 'angular']
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'postgresql', 'assembla', 'github', 'angular', 'typescript']
                 }
             }, {
                 type: 'portfolios',
