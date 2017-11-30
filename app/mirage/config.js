@@ -374,13 +374,37 @@ export default function() {
                 type: 'skills',
                 id: 41,
                 attributes: {
+                    name: 'Jasmine',
+                    url: 'https://jasmine.github.io/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 42,
+                attributes: {
                     name: 'Typescript',
                     url: 'https://www.typescriptlang.org/',
                     score: 2
                 }
             }, {
                 type: 'skills',
-                id: 42,
+                id: 43,
+                attributes: {
+                    name: 'Karma',
+                    url: 'http://karma-runner.github.io/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 44,
+                attributes: {
+                    name: 'Protractor',
+                    url: 'http://www.protractortest.org/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 45,
                 attributes: {
                     name: 'Bash',
                     url: 'https://www.gnu.org/software/bash/',
@@ -609,7 +633,7 @@ export default function() {
                     company: 'Europeana.eu',
                     url: 'http://europeana.eu',
                     image: 'europeana.eu.png',
-                    skills: ['ruby on rails', 'rspec', 'javascript', 'postgresql', 'assembla', 'github', 'angular', 'typescript']
+                    skills: ['ruby on rails', 'rspec', 'javascript', 'postgresql', 'assembla', 'github', 'angular', 'typescript', 'jasmine', 'karma', 'protractor']
                 }
             }, {
                 type: 'portfolios',
