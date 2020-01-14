@@ -104,7 +104,7 @@ export default function() {
                 attributes: {
                     name: 'Continuous Delivery',
                     url: 'https://en.wikipedia.org/wiki/Continuous_delivery',
-                    score: 3
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -112,7 +112,7 @@ export default function() {
                 attributes: {
                     name: 'ES6',
                     url: 'http://es6-features.org/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -144,7 +144,7 @@ export default function() {
                 attributes: {
                     name: 'JSON API',
                     url: 'http://jsonapi.org/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -328,7 +328,7 @@ export default function() {
                 attributes: {
                     name: 'Catalyst',
                     url: 'http://www.catalystframework.org/',
-                    score: 3
+                    score: 2
                 }
             }, {
                 type: 'skills',
@@ -368,7 +368,7 @@ export default function() {
                 attributes: {
                     name: 'Angular',
                     url: 'https://angular.io/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
@@ -384,7 +384,7 @@ export default function() {
                 attributes: {
                     name: 'Typescript',
                     url: 'https://www.typescriptlang.org/',
-                    score: 2
+                    score: 3
                 }
             }, {
                 type: 'skills',
