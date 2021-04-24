@@ -54,29 +54,13 @@ export default function() {
                 type: 'skills',
                 id: 1,
                 attributes: {
-                    name: 'Agile',
-                    url: 'https://en.wikipedia.org/wiki/Agile_software_development',
-                    score: 3
-                }
-            }, {
-                type: 'skills',
-                id: 2,
-                attributes: {
-                    name: 'Apache',
-                    url: 'http://www.apache.org/',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 3,
-                attributes: {
                     name: 'Backbone',
                     url: 'http://backbonejs.org/',
                     score: 1
                 }
             }, {
                 type: 'skills',
-                id: 4,
+                id: 2,
                 attributes: {
                     name: 'Bootstrap',
                     url: 'http://getbootstrap.com/',
@@ -84,7 +68,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 5,
+                id: 3,
                 attributes: {
                     name: 'C/C++',
                     url: 'http://www.cprogramming.com/',
@@ -92,23 +76,15 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 6,
+                id: 4,
                 attributes: {
-                    name: 'CSS3',
+                    name: 'CSS',
                     url: 'https://www.w3.org/Style/CSS/',
                     score: 3
                 }
             }, {
                 type: 'skills',
-                id: 7,
-                attributes: {
-                    name: 'Continuous Delivery',
-                    url: 'https://en.wikipedia.org/wiki/Continuous_delivery',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 8,
+                id: 5,
                 attributes: {
                     name: 'ES6',
                     url: 'http://es6-features.org/',
@@ -116,15 +92,15 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 9,
+                id: 6,
                 attributes: {
                     name: 'Ember',
                     url: 'http://emberjs.com/',
-                    score: 3
+                    score: 2
                 }
             }, {
                 type: 'skills',
-                id: 10,
+                id: 7,
                 attributes: {
                     name: 'Express',
                     url: 'http://expressjs.com/',
@@ -132,23 +108,15 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 11,
+                id: 8,
                 attributes: {
-                    name: 'HTML5',
+                    name: 'HTML',
                     url: 'https://www.w3.org/TR/html5/',
                     score: 3
                 }
             }, {
                 type: 'skills',
-                id: 12,
-                attributes: {
-                    name: 'JSON API',
-                    url: 'http://jsonapi.org/',
-                    score: 3
-                }
-            }, {
-                type: 'skills',
-                id: 13,
+                id: 9,
                 attributes: {
                     name: 'JavaScript',
                     url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
@@ -156,23 +124,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 14,
-                attributes: {
-                    name: 'Jira',
-                    url: 'https://www.atlassian.com/software/jira',
-                    score: 3
-                }
-            }, {
-                type: 'skills',
-                id: 15,
-                attributes: {
-                    name: 'Kanban',
-                    url: 'https://en.wikipedia.org/wiki/Kanban',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 16,
+                id: 10,
                 attributes: {
                     name: 'Linux',
                     url: 'http://www.linuxfoundation.org/',
@@ -180,7 +132,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 17,
+                id: 11,
                 attributes: {
                     name: 'MySQL',
                     url: 'https://www.mysql.com/',
@@ -188,39 +140,31 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 18,
+                id: 12,
                 attributes: {
-                    name: 'Node',
+                    name: 'NodeJS',
                     url: 'https://nodejs.org/',
                     score: 2
                 }
             }, {
                 type: 'skills',
-                id: 19,
+                id: 13,
                 attributes: {
                     name: 'Perl',
                     url: 'https://www.perl.org/',
-                    score: 3
-                }
-            }, {
-                type: 'skills',
-                id: 20,
-                attributes: {
-                    name: 'QUnit',
-                    url: 'https://qunitjs.com/',
                     score: 2
                 }
             }, {
                 type: 'skills',
-                id: 21,
+                id: 14,
                 attributes: {
-                    name: 'REST',
+                    name: 'REST API',
                     url: 'https://en.wikipedia.org/wiki/Representational_state_transfer',
                     score: 3
                 }
             }, {
                 type: 'skills',
-                id: 22,
+                id: 15,
                 attributes: {
                     name: 'RSpec',
                     url: 'http://rspec.info/',
@@ -228,7 +172,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 23,
+                id: 16,
                 attributes: {
                     name: 'Ruby on Rails',
                     url: 'http://rubyonrails.org/',
@@ -236,7 +180,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 24,
+                id: 17,
                 attributes: {
                     name: 'Ruby',
                     url: 'https://www.ruby-lang.org/en/',
@@ -244,23 +188,15 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 25,
+                id: 18,
                 attributes: {
-                    name: 'Sass3',
+                    name: 'Sass',
                     url: 'http://sass-lang.com/',
                     score: 2
                 }
             }, {
                 type: 'skills',
-                id: 26,
-                attributes: {
-                    name: 'Scrum',
-                    url: 'https://www.scrumalliance.org/',
-                    score: 3
-                }
-            }, {
-                type: 'skills',
-                id: 27,
+                id: 19,
                 attributes: {
                     name: 'Selenium',
                     url: 'http://www.seleniumhq.org/',
@@ -268,39 +204,23 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 28,
-                attributes: {
-                    name: 'Team management',
-                    url: 'https://en.wikipedia.org/wiki/Team_management',
-                    score: 3
-                }
-            }, {
-                type: 'skills',
-                id: 29,
-                attributes: {
-                    name: 'TDD',
-                    url: 'https://en.wikipedia.org/wiki/Test-driven_development',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 30,
+                id: 20,
                 attributes: {
                     name: 'WebdriverIO',
                     url: 'http://webdriver.io/',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 31,
-                attributes: {
-                    name: 'jQuery',
-                    url: 'https://jquery.com/',
                     score: 3
                 }
             }, {
                 type: 'skills',
-                id: 32,
+                id: 21,
+                attributes: {
+                    name: 'jQuery',
+                    url: 'https://jquery.com/',
+                    score: 2
+                }
+            }, {
+                type: 'skills',
+                id: 22,
                 attributes: {
                     name: 'Sinatra',
                     url: 'http://www.sinatrarb.com/',
@@ -308,7 +228,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 33,
+                id: 23,
                 attributes: {
                     name: 'Mocha',
                     url: 'http://mochajs.org/',
@@ -316,7 +236,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 34,
+                id: 24,
                 attributes: {
                     name: 'Haskell',
                     url: 'https://www.haskell.org/',
@@ -324,31 +244,15 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 35,
+                id: 25,
                 attributes: {
-                    name: 'Catalyst',
-                    url: 'http://www.catalystframework.org/',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 36,
-                attributes: {
-                    name: 'Middleman',
-                    url: 'https://middlemanapp.com/',
-                    score: 3
-                }
-            }, {
-                type: 'skills',
-                id: 37,
-                attributes: {
-                    name: 'D3',
+                    name: 'D3.js',
                     url: 'https://d3js.org/',
                     score: 2
                 }
             }, {
                 type: 'skills',
-                id: 38,
+                id: 26,
                 attributes: {
                     name: 'Git',
                     url: 'https://git-scm.com/',
@@ -356,7 +260,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 39,
+                id: 27,
                 attributes: {
                     name: 'Lua',
                     url: 'https://www.lua.org/',
@@ -364,7 +268,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 40,
+                id: 28,
                 attributes: {
                     name: 'Angular',
                     url: 'https://angular.io/',
@@ -372,15 +276,7 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 41,
-                attributes: {
-                    name: 'Jasmine',
-                    url: 'https://jasmine.github.io/',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 42,
+                id: 29,
                 attributes: {
                     name: 'Typescript',
                     url: 'https://www.typescriptlang.org/',
@@ -388,27 +284,27 @@ export default function() {
                 }
             }, {
                 type: 'skills',
-                id: 43,
+                id: 30,
                 attributes: {
-                    name: 'Karma',
-                    url: 'http://karma-runner.github.io/',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 44,
-                attributes: {
-                    name: 'Protractor',
-                    url: 'http://www.protractortest.org/',
-                    score: 2
-                }
-            }, {
-                type: 'skills',
-                id: 45,
-                attributes: {
-                    name: 'Bash',
-                    url: 'https://www.gnu.org/software/bash/',
+                    name: 'RxJS',
+                    url: 'https://rxjs-dev.firebaseapp.com/',
                     score: 3
+                }
+            }, {
+                type: 'skills',
+                id: 31,
+                attributes: {
+                    name: 'Rust',
+                    url: 'https://www.rust-lang.org/',
+                    score: 1
+                }
+            }, {
+                type: 'skills',
+                id: 32,
+                attributes: {
+                    name: 'NgRx',
+                    url: 'https://ngrx.io/',
+                    score: 2
                 }
             }]
         };
