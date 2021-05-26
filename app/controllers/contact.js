@@ -50,7 +50,7 @@ export default Ember.Controller.extend({
                     bootbox.alert({
                         size: "small",
                         title: `ERROR ${jqxhr.status} ${textStatus}`,
-                        message: "<p>Something went wrong. Please try again at a later time.</p>",
+                        message: "<p>Oops, something went wrong. Please send an email to <strong>kiffin.gish@planet.nl</strong> using your mail app.</p>",
                         callback: function(){}
                     });
                 }
