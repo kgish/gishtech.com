@@ -17,32 +17,6 @@
                 </blockquote>
             </div>
         </div>
-        <h4>Send me a message</h4>
-        <div class="row">
-            <div class="col-lg-12">
-                <form>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-group{{if validName ' has-success' ''}}">
-                                <label for="name">Name</label>
-                                {{input type="text" class="form-control form-control-success" id="name" value=name}}
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group{{if validEmail ' has-success' ''}}">
-                                <label for="email">Email</label>
-                                {{input type="email" class="form-control form-control-success" id="email" value=email}}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group{{if validMessage ' has-success' ''}}">
-                        <label for="message">Message</label>
-                        {{textarea class="form-control form-control-success" id="message" rows="5" value=message}}
-                    </div>
-                    <button type="submit" class="btn btn-primary{{if enableSubmit '' ' disabled'}}" {{action 'submit'}}>Send</button>
-                </form>
-            </div>
-        </div>
     </div>
 
 </div>
